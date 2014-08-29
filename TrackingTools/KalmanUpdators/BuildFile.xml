@@ -1,8 +1,4 @@
-<flags   CXXFLAGS="-Ofast -funroll-all-loops"/>
-<compiler name="gcc">
- <flags   CXXFLAGS="-mrecip"/>
-</compiler>
-
+#<flags   CXXFLAGS="-Ofast -mrecip -funroll-all-loops"/>
 <flags   CXXFLAGS="-O3"/>
 <use   name="boost"/>
 <use   name="clhep"/>

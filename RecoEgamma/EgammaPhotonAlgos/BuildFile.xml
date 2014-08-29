@@ -1,7 +1,4 @@
-<flags   CXXFLAGS="-Ofast"/>
-<compiler name="gcc">
-  <flags   CXXFLAGS="-mrecip"/>
-</compiler>
+<flags   CXXFLAGS="-Ofast -mrecip"/>
 
 <use   name="FWCore/Framework"/>
 <use   name="FWCore/ParameterSet"/>
