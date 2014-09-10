@@ -46,7 +46,6 @@
 #include "RecoLocalTracker/SiPixelRecHits/interface/SiPixelTemplateReco.h"
 #include "RecoLocalTracker/SiPixelRecHits/interface/SiPixelTemplate.h"
 
-
 #include <utility>
 #include <vector>
 
