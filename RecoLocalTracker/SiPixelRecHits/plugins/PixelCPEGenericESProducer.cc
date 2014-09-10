@@ -44,6 +44,7 @@ PixelCPEGenericESProducer::produce(const TkPixelCPERecord & iRecord){
 	ESHandle<SiPixelTemplateDBObject> templateDBobject;
 	iRecord.getRecord<SiPixelTemplateDBObjectESProducerRcd>().get(templateDBobject);
 
+
   cpe_  = boost::shared_ptr<PixelClusterParameterEstimator>(new PixelCPEGeneric(pset_,magfield.product(),lorentzAngle.product(),genErrorParm.product(),templateDBobject.product()) );
 	//ToDo? Replace blah.product() with ESHandle
 	

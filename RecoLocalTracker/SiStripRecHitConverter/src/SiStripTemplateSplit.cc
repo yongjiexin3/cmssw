@@ -80,7 +80,7 @@ int SiStripTemplateSplit::StripTempSplit(int id, float cotalpha, float cotbeta, 
     // Local variables 
 	int i, j, k, binq, binqerr, midpix;
 	int fxpix, nxpix, lxpix, logxpx, shiftx;
-	int nclusx;
+	int nclusx, clslenx;
 	int nxbin, xcbin, minbinj, minbink;
 	int deltaj, jmin, jmax, kmin, kmax, km, fxbin, lxbin, djx;
 	float sxthr, delta, sigma, pseudopix, xsize, qscale;
@@ -187,6 +187,23 @@ int SiStripTemplateSplit::StripTempSplit(int id, float cotalpha, float cotbeta, 
 		
 	   return 7; 
 	}
+
+       // If cluster is smaller than interpolated template size, technique fails
+
+        clslenx = (int)(templ.clslenx()+0.5f);
+
+        if(nxpix < clslenx) {
+
+           LOGDEBUG("SiStripTemplateReco") << "x-length of pixel cluster is smaller than the expected single cluster size" << ENDL;
+           if (theVerboseLevel > 2) {
+                        LOGDEBUG("SiStripTemplateReco") << "xsum[] = ";
+                        for(i=0; i<BSXSIZE-1; ++i) {LOGDEBUG("SiStripTemplateReco") << xsum[i] << ", ";}
+                        LOGDEBUG("SiStripTemplateReco") << ENDL;
+                }
+
+           return 8;
+        }
+
 	
 	// next, center the cluster on template center if necessary   
 	
@@ -401,7 +418,10 @@ int SiStripTemplateSplit::StripTempSplit(int id, float cotalpha, float cotbeta, 
 		xrec2 = (0.125f*(minbinj-xcbin)+BSHX-(float)shiftx+originx)*xsize - bias;
 		sigmax = sqrt2x*templ.xrmsc2m(binqerr);
 			
-	   
+		//Added by Yongjie
+	//	std::cout << "in the splitter code, xrec1 is " << xrec1 <<std::endl;
+	//	std::cout << "more details minbink is, xcbin, shiftx, originx, xsize, bias" << minbink << " " << xcbin << " " << shiftx << " " << originx << " " << xsize << " " << bias << std::endl;
+			   
 // Do goodness of fit test in y  
 	   
 	   if(chi2xmin < 0.0) {chi2xmin = 0.0;}

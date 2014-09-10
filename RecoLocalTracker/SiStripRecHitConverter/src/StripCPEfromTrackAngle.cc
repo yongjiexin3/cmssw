@@ -33,7 +33,7 @@ localParameters( const SiStripCluster& cluster, const GeomDetUnit& det, const Lo
   const float uerr2 = stripErrorSquared( N, std::abs(fullProjection) );
   const float strip = cluster.barycenter() -  0.5f*(1.f-shift[p.moduleGeom]) * fullProjection
     + 0.5f*p.coveredStrips(track, ltp.position());
-  
+  //std::cout<<"TRACK ANGLE"<< std::endl;
   return std::make_pair( p.topology->localPosition(strip, ltp.vector()),
 			 p.topology->localError(strip, uerr2, ltp.vector()) );
 }

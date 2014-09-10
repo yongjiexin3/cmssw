@@ -518,7 +518,7 @@ bool SiPixelTemplate::pushfile(const SiPixelTemplateDBObject& dbobject)
 	
 	// Create a local template storage entry
 	SiPixelTemplateStore theCurrentTemp;
-	
+	//std::cout <<  db.numOfTempl() << std::endl;
 	// Fill the template storage for each template calibration stored in the db
 	for(int m=0; m<db.numOfTempl(); ++m)
 	{
@@ -857,6 +857,7 @@ bool SiPixelTemplate::pushfile(const SiPixelTemplateDBObject& dbobject)
 		// Add this template to the store
 		
 		thePixelTemp_.push_back(theCurrentTemp);
+		//std::cout<<theCurrentTemp.head.ID << std::endl;
 		
 	}
 	return true;

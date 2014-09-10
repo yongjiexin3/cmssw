@@ -5,6 +5,12 @@
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 #include "FWCore/Utilities/interface/InputTag.h"
 
+#include "RecoLocalTracker/Records/interface/TkPixelCPERecord.h"
+#include "RecoLocalTracker/Records/interface/Tk2DPixelCPERecord.h"
+#include "CalibTracker/Records/interface/SiPixel2DTemplateDBObjectESProducerRcd.h"
+#include "CalibTracker/SiPixelESProducers/interface/SiPixelTemplateDBObjectESProducer.h"
+#include "CondFormats/DataRecord/interface/SiPixel2DTemplateDBObjectRcd.h"
+
 #include "DataFormats/Common/interface/Handle.h"
 #include "FWCore/Framework/interface/ESHandle.h"
 #include "DataFormats/SiStripCluster/interface/SiStripCluster.h"
@@ -13,6 +19,11 @@
 #include "DataFormats/TrackerRecHit2D/interface/SiStripRecHit1D.h"
 #include "DataFormats/TrackerRecHit2D/interface/SiPixelRecHit.h"
 #include "DataFormats/Common/interface/DetSetVectorNew.h"
+
+#include "Geometry/CommonDetUnit/interface/GeomDet.h"
+
+#include <CondFormats/SiPixelObjects/interface/SiPixelTemplateDBObject.h>
+#include <CondFormats/SiPixelObjects/interface/SiPixel2DTemplateDBObject.h>
 
 #include "DataFormats/TrackReco/interface/Track.h"
 #include "DataFormats/VertexReco/interface/Vertex.h"
@@ -39,6 +50,7 @@
 #include "RecoLocalTracker/SiPixelRecHits/interface/SiPixelTemplateSplit.h"
 #include "RecoLocalTracker/SiPixelRecHits/interface/SiPixelTemplateDefs.h"
 #include "RecoLocalTracker/SiPixelRecHits/interface/SiPixelTemplateReco.h"
+
 
 #include "RecoLocalTracker/SiStripRecHitConverter/interface/SiStripTemplate.h"
 #include "RecoLocalTracker/SiStripRecHitConverter/interface/SiStripTemplateSplit.h"
@@ -73,10 +85,16 @@ private:
   edm::InputTag stripClusters_;
   edm::InputTag pixelClusters_;
   
+  unsigned int  StripTemplateID_;
+
   bool simSplitPixel_;
   bool simSplitStrip_;
   bool tmpSplitPixel_;
   bool tmpSplitStrip_;
+
+  bool LoadTemplatesFromDB_;
+  const SiPixelTemplateDBObject * templateDBobject_;
+  const SiPixel2DTemplateDBObject * templateDBobject2D_;
 
   // Template splitting needs to know the track direction.
   // We can use either straight tracks, pixel tracks of fully reconstructed track. 
@@ -91,7 +109,7 @@ private:
   // The use of either straight or fully reconstructed tracks give very similar performance. Use straight tracks 
   // by default because it's faster and less involved. Pixel tracks DO NOT work.
   bool useTrajectories_; 
-
+  bool Loaded;
   // These are either "generalTracks", if useTrajectories_ = True, or "pixelTracks" if  useTrajectories_ = False
   edm::InputTag trajectories_;  
 
@@ -155,7 +173,7 @@ private:
   template<typename C> 
   static const C* equalClusters(const C &c1, const C &c2) 
   { 
-    return nullptr; 
+    return false; 
   }
   
   // Find a rechit in a vector of ClusterWithTrack
@@ -246,7 +264,8 @@ TrackClusterSplitter::TrackClusterSplitter(const edm::ParameterSet& iConfig):
   simSplitStrip_ = (iConfig.getParameter<bool>("simSplitStrip"));
   tmpSplitPixel_ = (iConfig.getParameter<bool>("tmpSplitPixel")); // not so nice... you don't want two bool but some switch
   tmpSplitStrip_ = (iConfig.getParameter<bool>("tmpSplitStrip"));
-
+  StripTemplateID_ = (iConfig.getParameter<unsigned int>("StripTemplateID"));
+  LoadTemplatesFromDB_ = (iConfig.getParameter<bool>("LoadTemplatesFromDB"));
   useStraightTracks_ = (iConfig.getParameter<bool>("useStraightTracks"));
 
   /*
@@ -267,18 +286,19 @@ TrackClusterSplitter::TrackClusterSplitter(const edm::ParameterSet& iConfig):
   */
 
   // Load template; 40 for barrel and 41 for endcaps
-  templ_.pushfile( 40 );
-  templ_.pushfile( 41 );
-  templ2D_.pushfile( 40 );
-  templ2D_.pushfile( 41 );
+ // templ_.pushfile( 40 );
+ // templ_.pushfile( 41 );
+ // templ2D_.pushfile( 40 );
+ // templ2D_.pushfile( 41 );
 
   // Load strip templates
-  strip_templ_.pushfile( 11 );
-  strip_templ_.pushfile( 12 );
-  strip_templ_.pushfile( 13 );
-  strip_templ_.pushfile( 14 );
-  strip_templ_.pushfile( 15 );
-  strip_templ_.pushfile( 16 );
+ // strip_templ_.pushfile( 11 );
+ // strip_templ_.pushfile( 12 );
+ // strip_templ_.pushfile( 13 );
+ // strip_templ_.pushfile( 14 );
+ // strip_templ_.pushfile( 15 );
+  //strip_templ_.pushfile( 16 );
+  Loaded = 0;
 
 }
 
@@ -318,13 +338,49 @@ TrackClusterSplitter::~TrackClusterSplitter()
 void
 TrackClusterSplitter::produce(edm::Event& iEvent, const edm::EventSetup& iSetup)
 {
+
   using namespace edm;
+  if (!Loaded){
+  edm::ESHandle<SiPixelTemplateDBObject> templateDBobject;
+  iSetup.get<SiPixelTemplateDBObjectRcd>().get(templateDBobject);
+  templateDBobject_ = templateDBobject.product();
+
+  edm::ESHandle<SiPixel2DTemplateDBObject> templateDBobject2D;
+  iSetup.get<SiPixel2DTemplateDBObjectRcd>().get(templateDBobject2D);
+  templateDBobject2D_ = templateDBobject2D.product();
+
+
+
+
+
+  if (LoadTemplatesFromDB_)	    
+  {
+  	templ_.pushfile( *templateDBobject.product() );
+  	templ2D_.pushfile( *templateDBobject2D.product() );
+  }
+  else
+  {
+  	templ_.pushfile( 40 );
+  	templ_.pushfile( 41 );
+  	templ2D_.pushfile( 40 );
+  	templ2D_.pushfile( 41 );
+  }
+
+  // Load strip templates
+  strip_templ_.pushfile( StripTemplateID_ + 1 );
+  strip_templ_.pushfile( StripTemplateID_ + 2 );
+  strip_templ_.pushfile( StripTemplateID_ + 3 );
+  strip_templ_.pushfile( StripTemplateID_ + 4 );
+  strip_templ_.pushfile( StripTemplateID_ + 5 );
+  strip_templ_.pushfile( StripTemplateID_ + 6 );
+  Loaded = 1;
+}
 
   iSetup.get<GlobalTrackingGeometryRecord>().get(geometry_);  
   
+  iSetup.get<IdealMagneticFieldRecord>().get( magfield_ );
   if ( !useTrajectories_ ) 
     {
-      iSetup.get<IdealMagneticFieldRecord>().get( magfield_ );
       iSetup.get<TrackingComponentsRecord>().get( "AnalyticalPropagator", propagator_ );
     }
  
@@ -811,24 +867,24 @@ void TrackClusterSplitter::splitCluster<SiStripCluster> (const SiStripClusterWit
 	      if      ( ssdid.moduleGeometry() == 1 ) // IB1 
 		{
 		  if ( !is_stereo ) 
-		    ID = 11;
+		    ID = StripTemplateID_ + 1;
 		  else
-		    ID = 12;
+		    ID = StripTemplateID_ + 2;
 		}
 	      else if ( ssdid.moduleGeometry() == 2 ) // IB2
 		{
-		  ID = 13;
+		  ID = StripTemplateID_ + 3;
 		}
 	      else if ( ssdid.moduleGeometry() == 3 ) // OB1
 		{
-		  ID = 16; 
+		  ID = StripTemplateID_ + 6; 
 		}
 	      else if ( ssdid.moduleGeometry() == 4 ) // OB2
 		{
 		  if ( !is_stereo )
-		    ID = 14;
+		    ID = StripTemplateID_ + 4;
 		  else
-		    ID = 15;
+		    ID = StripTemplateID_ + 5;
 		}
 	      else 
 		{
@@ -1218,6 +1274,7 @@ void TrackClusterSplitter::splitCluster<SiPixelCluster> (const SiPixelClusterWit
 							 DetId detId 
 							 ) const 
 { 
+
   // The sim splitter:
   if ( simSplitPixel_ ) 
     {
@@ -1240,6 +1297,9 @@ void TrackClusterSplitter::splitCluster<SiPixelCluster> (const SiPixelClusterWit
       std::vector<SiPixelCluster> splittedCluster;
       splittedCluster.clear();
       
+
+
+
       for ( ; linkiter != digiLink.data.end(); linkiter++) 
 	{ // loop over all digisimlinks 
 	  dsl++;
@@ -1322,7 +1382,7 @@ void TrackClusterSplitter::splitCluster<SiPixelCluster> (const SiPixelClusterWit
       bool cluster_was_successfully_split = false;
       
       const SiPixelCluster* thePixelCluster = static_cast<const SiPixelCluster*>(c.cluster);
-
+      const GeomDetUnit* theDet = geometry_->idToDetUnit( detId );
       if ( thePixelCluster )
 	{ 
 	  // Do not attempt to split clusters of size one
@@ -1332,10 +1392,23 @@ void TrackClusterSplitter::splitCluster<SiPixelCluster> (const SiPixelClusterWit
 	      //cout << "Will not attempt to split this clusters: " << endl;
 	      //cout << "(int)thePixelCluster->size() = " << (int)thePixelCluster->size() << endl;
 	    }
+
 	  else
 	    {
+	     int ID = -99999;
+	     int ID2D = -99999;
+             if (LoadTemplatesFromDB_)
+		{
+		
+      		ID = templateDBobject_->getTemplateID(theDet->geographicalId());
+      		ID2D = templateDBobject2D_->getTemplateID(theDet->geographicalId());
+
+		//cout << "1D template ID " << ID <<endl;
+		//cout << "2D template ID " << ID2D <<endl;
+		}
 	      // For barrel use template id 40 and for endcaps use template id 41
-	      int ID = -99999;
+	      else{
+
 	      if ( (int)detId.subdetId() == (int)PixelSubdetector::PixelBarrel  )
 		{
 		  //		  cout << "We are in the barrel : " << (int)PixelSubdetector::PixelBarrel << endl;
@@ -1350,7 +1423,7 @@ void TrackClusterSplitter::splitCluster<SiPixelCluster> (const SiPixelClusterWit
 		{
 		  // cout << "Not a pixel detector !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! " << endl;
 		}
-	      
+	      }
 
 	      // Begin: determine incident angles ============================================================
 
@@ -1363,7 +1436,7 @@ void TrackClusterSplitter::splitCluster<SiPixelCluster> (const SiPixelClusterWit
 	      float xcenter = thePixelCluster->x();
 	      float ycenter = thePixelCluster->y();
 	      
-	      const GeomDetUnit* theDet = geometry_->idToDetUnit( detId );
+	    //  const GeomDetUnit* theDet = geometry_->idToDetUnit( detId );
 	      const PixelGeomDetUnit* pixDet = dynamic_cast<const PixelGeomDetUnit*>( theDet );
 	      
 	      const PixelTopology* theTopol = (&(pixDet->specificTopology()));
@@ -1544,9 +1617,9 @@ void TrackClusterSplitter::splitCluster<SiPixelCluster> (const SiPixelClusterWit
 		      float templProbX_  = -99999.9;
 		      float dchisq       = -99999.9;
 		      float templProbQ_  = -99999.9;
-
+		      //cout << "2D template ID " << ID2D <<endl;
 		      int ierr =
-			SiPixelTemplateSplit::PixelTempSplit( ID, 
+			SiPixelTemplateSplit::PixelTempSplit( ID,
 							      cotalpha_, cotbeta_,
 							      clust_array_2d, 
 							      ydouble, xdouble,
@@ -1558,7 +1631,7 @@ void TrackClusterSplitter::splitCluster<SiPixelCluster> (const SiPixelClusterWit
 							      true, 
 							      dchisq, 
 							      templ2D_ );
-		        
+
 		      if ( ierr != 0 )
 			{
 			  // cout << "Cluster splitting failed: ierr = " << ierr << endl;
@@ -1617,16 +1690,16 @@ void TrackClusterSplitter::splitCluster<SiPixelCluster> (const SiPixelClusterWit
 				}
 			    }
 			   
-   
+
 			  bool template_OK 
-			    = templ2D_.xytemp(ID, cotalpha_, cotbeta_, 
+			    = templ2D_.xytemp(ID2D, cotalpha_, cotbeta_, 
 					      xrecp1, yrecp1, 
 					      ydouble, xdouble, 
 					      template2d1);
 			  
 			  template_OK 
 			    = template_OK && 
-			    templ2D_.xytemp(ID, cotalpha_, cotbeta_, 
+			    templ2D_.xytemp(ID2D, cotalpha_, cotbeta_, 
 					    xrecp2, yrecp2, 
 					    ydouble, xdouble, 
 					    template2d2);

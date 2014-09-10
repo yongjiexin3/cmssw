@@ -1,0 +1,13 @@
+/ClusterAnalyzer.cc/1.3/Tue Apr 24 15:44:32 2012//TV01-09-03
+/ClusterMultiplicityFilter.cc/1.5/Fri Dec 18 20:45:04 2009//TV01-09-03
+/ClusterSummaryProducer.cc/1.5/Tue Apr 24 15:44:32 2012//TV01-09-03
+/ClusterVariables.cc/1.1/Tue Jan 24 18:00:23 2012//TV01-09-03
+/HLTTrackClusterRemover.cc/1.11/Tue Jan 17 11:15:51 2012//TV01-09-03
+/PixelClusterSelectorTopBottom.cc/1.2/Mon Dec 13 17:30:03 2010//TV01-09-03
+/SealModules.cc/1.5/Tue Jan 24 18:00:23 2012//TV01-09-03
+/SeedClusterRemover.cc/1.1/Mon Feb 27 15:56:04 2012//TV01-09-03
+/StripClusterSelectorTopBottom.cc/1.1/Tue Aug 18 14:10:33 2009//TV01-09-03
+/TopBottomClusterInfoProducer.cc/1.6/Wed Apr 27 09:37:40 2011//TV01-09-03
+/TrackClusterRemover.cc/1.25/Sat Mar 10 12:30:17 2012//TV01-09-03
+/TrackClusterSplitter.cc/1.3/Fri Jan 27 04:35:00 2012//TV01-09-03
+D

@@ -144,6 +144,8 @@ ClusterSummaryProducer::produce(edm::Event& iEvent, const edm::EventSetup& iSetu
    }
 
 
+
+
    //===================+++++++++++++========================
    //
    //                   Fill Producer
@@ -175,6 +177,7 @@ ClusterSummaryProducer::produce(edm::Event& iEvent, const edm::EventSetup& iSetu
    
    if (verbose) std::cout << "-------------------------------------------------------" << std::endl;
    
+
    firstpass = false;
    firstpassPixel = false;
 

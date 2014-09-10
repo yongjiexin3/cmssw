@@ -1,0 +1,14 @@
+/CrosstalkInversion.h/1.4/Sun Dec 27 07:03:59 2009//TV06-00-03
+/ErrorPropogationTypes.h/1.2/Mon Sep 28 16:39:29 2009//TV06-00-03
+/SiStripRecHitConverterAlgorithm.h/1.30/Wed Sep 23 03:33:46 2009//TV06-00-03
+/SiStripRecHitMatcher.h/1.40/Sat Feb 18 17:16:13 2012//TV06-00-03
+/SiStripTemplate.h/1.1/Fri Jan  6 16:18:00 2012//TV06-00-03
+/SiStripTemplateDefs.h/1.1/Fri Jan  6 16:18:00 2012//TV06-00-03
+/SiStripTemplateReco.h/1.2/Sat Feb 18 00:09:03 2012//TV06-00-03
+/SiStripTemplateSplit.h/1.1/Fri Jan  6 16:18:00 2012//TV06-00-03
+/StripCPE.h/1.29/Sun Jan 29 13:30:29 2012//TV06-00-03
+/StripCPEfromTemplate.h/1.2/Sun Jan 29 13:42:54 2012//TV06-00-03
+/StripCPEfromTrackAngle.h/1.13/Sun Jan 29 13:30:29 2012//TV06-00-03
+/StripCPEgeometric.h/1.21/Sun Jan 29 13:30:29 2012//TV06-00-03
+/VVIObj.h/1.1/Fri Jan  6 16:18:00 2012//TV06-00-03
+D
