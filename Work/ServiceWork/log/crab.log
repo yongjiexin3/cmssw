@@ -1,0 +1,2736 @@
+2014-12-04 12:17:12,317 [DEBUG] 	/cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -create
+
+2014-12-04 12:17:12,318 [INFO] 	Version 2.11.1_patch1 running on Thu Dec  4 12:17:12 2014 CST (18:17:12 UTC)
+
+crab. Working options:
+	scheduler           remoteGlidein
+	job type            CMSSW
+	server              OFF
+	working directory   /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork/
+
+2014-12-04 12:17:12,318 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/allowed_releases.conf].
+2014-12-04 12:17:12,537 [DEBUG] 	Input whitelist: 
+2014-12-04 12:17:12,538 [DEBUG] 	Input blacklist: 
+2014-12-04 12:17:12,538 [DEBUG] 	Converted whitelist: 
+2014-12-04 12:17:12,538 [DEBUG] 	Converted blacklist: 
+2014-12-04 12:17:14,235 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:17:14,237 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2014-12-04 12:17:16,466 [DEBUG] 	Linux cmslpc26.fnal.gov 2.6.32-504.el6.x86_64 #1 SMP Tue Oct 14 11:22:00 CDT 2014 x86_64 x86_64 x86_64 GNU/Linux
+ 
+Used properties:
+Linux cmslpc26.fnal.gov 2.6.32-504.el6.x86_64 #1 SMP Tue Oct 14 11:22:00 CDT 2014 x86_64 x86_64 x86_64 GNU/Linux
+ 
+Used properties:
+   CMSSW.allow_nonproductioncmssw : 1
+   CMSSW.datasetpath : /RelValQCD_FlatPt_15_3000HS_13/CMSSW_7_3_0_pre3-MCRUN2_73_V5-v1/GEN-SIM-RECO
+   CMSSW.get_edm_output : 1
+   CMSSW.number_of_jobs : 200
+   CMSSW.pset : PFClusterJets_version1.py
+   CMSSW.total_number_of_events : -1
+   CRAB.create : 
+   CRAB.jobtype : CMSSW
+   CRAB.scheduler : remoteGlidein
+   CRAB.use_server : 0
+   USER.copy_data : 1
+   USER.publish_data_name : ServiceWork
+   USER.return_data : 0
+   USER.storage_element : cmseos.fnal.gov
+   USER.storage_path : /srm/v2/server?SFN=/eos/uscms/
+   USER.ui_working_dir : ServiceWork
+   USER.user_remote_dir : /store/user/yxin/Service
+End of used properties.
+
+2014-12-04 12:17:16,467 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:17:16,468 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2 
+2014-12-04 12:17:16,468 [INFO] 	PSN black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+2014-12-04 12:17:16,736 [DEBUG] 	CMSSW::__init__
+2014-12-04 12:17:16,737 [DEBUG] 	Scram::Scram() version is 2
+2014-12-04 12:17:16,737 [DEBUG] 	Scram::Scram() arch is slc6_amd64_gcc481
+2014-12-04 12:17:16,737 [DEBUG] 	Downloading file [https://cmssdt.cern.ch/SDT/cgi-bin] to [/uscms/home/yongjie/.cms_crab/ReleasesXML?anytype=1].
+2014-12-04 12:17:16,879 [INFO] 	Contacting Data Discovery Services ...
+2014-12-04 12:17:16,879 [INFO] 	Accessing DBS at: https://cmsweb.cern.ch/dbs/prod/global/DBSReader
+2014-12-04 12:17:18,589 [INFO] 	DBS3 lookup took  1.51 sec
+2014-12-04 12:17:18,709 [INFO] 	Datatype is mc
+2014-12-04 12:17:18,711 [DEBUG] 	Retrieve block locations with
+curl -ks --cert $X509_USER_PROXY --key $X509_USER_PROXY "https://cmsweb.cern.ch/phedex/datasvc/json/prod/BlockReplicaSummary?dataset=/RelValQCD_FlatPt_15_3000HS_13/CMSSW_7_3_0_pre3-MCRUN2_73_V5-v1/GEN-SIM-RECO&complete=y"
+2014-12-04 12:17:19,506 [DEBUG] 	Retrieve PNNs type with
+curl -ks --cert $X509_USER_PROXY --key $X509_USER_PROXY "https://cmsweb.cern.ch/phedex/datasvc/cjson/prod/nodes"
+2014-12-04 12:17:20,280 [INFO] 	Requested dataset: /RelValQCD_FlatPt_15_3000HS_13/CMSSW_7_3_0_pre3-MCRUN2_73_V5-v1/GEN-SIM-RECO has 48200 events in 3 blocks.
+
+2014-12-04 12:17:21,060 [DEBUG] 	Job splitting method: EventBased
+2014-12-04 12:17:21,061 [INFO] 	May not create the exact number_of_jobs requested.
+2014-12-04 12:17:21,061 [DEBUG] 	Events in Block File 3300
+2014-12-04 12:17:21,061 [DEBUG] 	Events in Block File 4000
+2014-12-04 12:17:21,062 [DEBUG] 	Events in Block File 40900
+2014-12-04 12:17:21,065 [DEBUG] 	
+Job 32 can run over 241 events.
+Job 32 Destination: ['T2_CH_CERN']
+Job 33 can run over 241 events.
+Job 33 Destination: ['T2_CH_CERN']
+Job 34 can run over 241 events.
+Job 34 Destination: ['T2_CH_CERN']
+Job 35 can run over 241 events.
+Job 35 Destination: ['T2_CH_CERN']
+Job 36 can run over 241 events.
+Job 36 Destination: ['T2_CH_CERN']
+Job 37 can run over 241 events.
+Job 37 Destination: ['T2_CH_CERN']
+Job 38 can run over 241 events.
+Job 38 Destination: ['T2_CH_CERN']
+Job 39 can run over 241 events.
+Job 39 Destination: ['T2_CH_CERN']
+Job 40 can run over 241 events.
+Job 40 Destination: ['T2_CH_CERN']
+Job 41 can run over 241 events.
+Job 41 Destination: ['T2_CH_CERN']
+Job 42 can run over 241 events.
+Job 42 Destination: ['T2_CH_CERN']
+Job 43 can run over 241 events.
+Job 43 Destination: ['T2_CH_CERN']
+Job 44 can run over 241 events.
+Job 44 Destination: ['T2_CH_CERN']
+Job 45 can run over 241 events.
+Job 45 Destination: ['T2_CH_CERN']
+Job 46 can run over 241 events.
+Job 46 Destination: ['T2_CH_CERN']
+Job 47 can run over 241 events.
+Job 47 Destination: ['T2_CH_CERN']
+Job 48 can run over 241 events.
+Job 48 Destination: ['T2_CH_CERN']
+Job 49 can run over 241 events.
+Job 49 Destination: ['T2_CH_CERN']
+Job 50 can run over 241 events.
+Job 50 Destination: ['T2_CH_CERN']
+Job 51 can run over 241 events.
+Job 51 Destination: ['T2_CH_CERN']
+Job 52 can run over 241 events.
+Job 52 Destination: ['T2_CH_CERN']
+Job 53 can run over 241 events.
+Job 53 Destination: ['T2_CH_CERN']
+Job 54 can run over 241 events.
+Job 54 Destination: ['T2_CH_CERN']
+Job 55 can run over 241 events.
+Job 55 Destination: ['T2_CH_CERN']
+Job 56 can run over 241 events.
+Job 56 Destination: ['T2_CH_CERN']
+Job 57 can run over 241 events.
+Job 57 Destination: ['T2_CH_CERN']
+Job 58 can run over 241 events.
+Job 58 Destination: ['T2_CH_CERN']
+Job 59 can run over 241 events.
+Job 59 Destination: ['T2_CH_CERN']
+Job 60 can run over 241 events.
+Job 60 Destination: ['T2_CH_CERN']
+Job 61 can run over 241 events.
+Job 61 Destination: ['T2_CH_CERN']
+Job 62 can run over 241 events.
+Job 62 Destination: ['T2_CH_CERN']
+Job 63 can run over 241 events.
+Job 63 Destination: ['T2_CH_CERN']
+Job 64 can run over 241 events.
+Job 64 Destination: ['T2_CH_CERN']
+Job 65 can run over 241 events.
+Job 65 Destination: ['T2_CH_CERN']
+Job 66 can run over 241 events.
+Job 66 Destination: ['T2_CH_CERN']
+Job 67 can run over 241 events.
+Job 67 Destination: ['T2_CH_CERN']
+Job 68 can run over 241 events.
+Job 68 Destination: ['T2_CH_CERN']
+Job 69 can run over 241 events.
+Job 69 Destination: ['T2_CH_CERN']
+Job 70 can run over 241 events.
+Job 70 Destination: ['T2_CH_CERN']
+Job 71 can run over 241 events.
+Job 71 Destination: ['T2_CH_CERN']
+Job 72 can run over 241 events.
+Job 72 Destination: ['T2_CH_CERN']
+Job 73 can run over 241 events.
+Job 73 Destination: ['T2_CH_CERN']
+Job 74 can run over 241 events.
+Job 74 Destination: ['T2_CH_CERN']
+Job 75 can run over 241 events.
+Job 75 Destination: ['T2_CH_CERN']
+Job 76 can run over 241 events.
+Job 76 Destination: ['T2_CH_CERN']
+Job 77 can run over 241 events.
+Job 77 Destination: ['T2_CH_CERN']
+Job 78 can run over 241 events.
+Job 78 Destination: ['T2_CH_CERN']
+Job 79 can run over 241 events.
+Job 79 Destination: ['T2_CH_CERN']
+Job 80 can run over 241 events.
+Job 80 Destination: ['T2_CH_CERN']
+Job 81 can run over 241 events.
+Job 81 Destination: ['T2_CH_CERN']
+Job 82 can run over 241 events.
+Job 82 Destination: ['T2_CH_CERN']
+Job 83 can run over 241 events.
+Job 83 Destination: ['T2_CH_CERN']
+Job 84 can run over 241 events.
+Job 84 Destination: ['T2_CH_CERN']
+Job 85 can run over 241 events.
+Job 85 Destination: ['T2_CH_CERN']
+Job 86 can run over 241 events.
+Job 86 Destination: ['T2_CH_CERN']
+Job 87 can run over 241 events.
+Job 87 Destination: ['T2_CH_CERN']
+Job 88 can run over 241 events.
+Job 88 Destination: ['T2_CH_CERN']
+Job 89 can run over 241 events.
+Job 89 Destination: ['T2_CH_CERN']
+Job 90 can run over 241 events.
+Job 90 Destination: ['T2_CH_CERN']
+Job 91 can run over 241 events.
+Job 91 Destination: ['T2_CH_CERN']
+Job 92 can run over 241 events.
+Job 92 Destination: ['T2_CH_CERN']
+Job 93 can run over 241 events.
+Job 93 Destination: ['T2_CH_CERN']
+Job 94 can run over 241 events.
+Job 94 Destination: ['T2_CH_CERN']
+Job 95 can run over 241 events.
+Job 95 Destination: ['T2_CH_CERN']
+Job 96 can run over 241 events.
+Job 96 Destination: ['T2_CH_CERN']
+Job 97 can run over 241 events.
+Job 97 Destination: ['T2_CH_CERN']
+Job 98 can run over 241 events.
+Job 98 Destination: ['T2_CH_CERN']
+Job 99 can run over 241 events.
+Job 99 Destination: ['T2_CH_CERN']
+Job 100 can run over 241 events.
+Job 100 Destination: ['T2_CH_CERN']
+Job 101 can run over 241 events.
+Job 101 Destination: ['T2_CH_CERN']
+Job 102 can run over 241 events.
+Job 102 Destination: ['T2_CH_CERN']
+Job 103 can run over 241 events.
+Job 103 Destination: ['T2_CH_CERN']
+Job 104 can run over 241 events.
+Job 104 Destination: ['T2_CH_CERN']
+Job 105 can run over 241 events.
+Job 105 Destination: ['T2_CH_CERN']
+Job 106 can run over 241 events.
+Job 106 Destination: ['T2_CH_CERN']
+Job 107 can run over 241 events.
+Job 107 Destination: ['T2_CH_CERN']
+Job 108 can run over 241 events.
+Job 108 Destination: ['T2_CH_CERN']
+Job 109 can run over 241 events.
+Job 109 Destination: ['T2_CH_CERN']
+Job 110 can run over 241 events.
+Job 110 Destination: ['T2_CH_CERN']
+Job 111 can run over 241 events.
+Job 111 Destination: ['T2_CH_CERN']
+Job 112 can run over 241 events.
+Job 112 Destination: ['T2_CH_CERN']
+Job 113 can run over 241 events.
+Job 113 Destination: ['T2_CH_CERN']
+Job 114 can run over 241 events.
+Job 114 Destination: ['T2_CH_CERN']
+Job 115 can run over 241 events.
+Job 115 Destination: ['T2_CH_CERN']
+Job 116 can run over 241 events.
+Job 116 Destination: ['T2_CH_CERN']
+Job 117 can run over 241 events.
+Job 117 Destination: ['T2_CH_CERN']
+Job 118 can run over 241 events.
+Job 118 Destination: ['T2_CH_CERN']
+Job 119 can run over 241 events.
+Job 119 Destination: ['T2_CH_CERN']
+Job 120 can run over 241 events.
+Job 120 Destination: ['T2_CH_CERN']
+Job 121 can run over 241 events.
+Job 121 Destination: ['T2_CH_CERN']
+Job 122 can run over 241 events.
+Job 122 Destination: ['T2_CH_CERN']
+Job 123 can run over 241 events.
+Job 123 Destination: ['T2_CH_CERN']
+Job 124 can run over 241 events.
+Job 124 Destination: ['T2_CH_CERN']
+Job 125 can run over 241 events.
+Job 125 Destination: ['T2_CH_CERN']
+Job 126 can run over 241 events.
+Job 126 Destination: ['T2_CH_CERN']
+Job 127 can run over 241 events.
+Job 127 Destination: ['T2_CH_CERN']
+Job 128 can run over 241 events.
+Job 128 Destination: ['T2_CH_CERN']
+Job 129 can run over 241 events.
+Job 129 Destination: ['T2_CH_CERN']
+Job 130 can run over 241 events.
+Job 130 Destination: ['T2_CH_CERN']
+Job 131 can run over 241 events.
+Job 131 Destination: ['T2_CH_CERN']
+Job 132 can run over 241 events.
+Job 132 Destination: ['T2_CH_CERN']
+Job 133 can run over 241 events.
+Job 133 Destination: ['T2_CH_CERN']
+Job 134 can run over 241 events.
+Job 134 Destination: ['T2_CH_CERN']
+Job 135 can run over 241 events.
+Job 135 Destination: ['T2_CH_CERN']
+Job 136 can run over 241 events.
+Job 136 Destination: ['T2_CH_CERN']
+Job 137 can run over 241 events.
+Job 137 Destination: ['T2_CH_CERN']
+Job 138 can run over 241 events.
+Job 138 Destination: ['T2_CH_CERN']
+Job 139 can run over 241 events.
+Job 139 Destination: ['T2_CH_CERN']
+Job 140 can run over 241 events.
+Job 140 Destination: ['T2_CH_CERN']
+Job 141 can run over 241 events.
+Job 141 Destination: ['T2_CH_CERN']
+Job 142 can run over 241 events.
+Job 142 Destination: ['T2_CH_CERN']
+Job 143 can run over 241 events.
+Job 143 Destination: ['T2_CH_CERN']
+Job 144 can run over 241 events.
+Job 144 Destination: ['T2_CH_CERN']
+Job 145 can run over 241 events.
+Job 145 Destination: ['T2_CH_CERN']
+Job 146 can run over 241 events.
+Job 146 Destination: ['T2_CH_CERN']
+Job 147 can run over 241 events.
+Job 147 Destination: ['T2_CH_CERN']
+Job 148 can run over 241 events.
+Job 148 Destination: ['T2_CH_CERN']
+Job 149 can run over 241 events.
+Job 149 Destination: ['T2_CH_CERN']
+Job 150 can run over 241 events.
+Job 150 Destination: ['T2_CH_CERN']
+Job 151 can run over 241 events.
+Job 151 Destination: ['T2_CH_CERN']
+Job 152 can run over 241 events.
+Job 152 Destination: ['T2_CH_CERN']
+Job 153 can run over 241 events.
+Job 153 Destination: ['T2_CH_CERN']
+Job 154 can run over 241 events.
+Job 154 Destination: ['T2_CH_CERN']
+Job 155 can run over 241 events.
+Job 155 Destination: ['T2_CH_CERN']
+Job 156 can run over 241 events.
+Job 156 Destination: ['T2_CH_CERN']
+Job 157 can run over 241 events.
+Job 157 Destination: ['T2_CH_CERN']
+Job 158 can run over 241 events.
+Job 158 Destination: ['T2_CH_CERN']
+Job 159 can run over 241 events.
+Job 159 Destination: ['T2_CH_CERN']
+Job 160 can run over 241 events.
+Job 160 Destination: ['T2_CH_CERN']
+Job 161 can run over 241 events.
+Job 161 Destination: ['T2_CH_CERN']
+Job 162 can run over 241 events.
+Job 162 Destination: ['T2_CH_CERN']
+Job 163 can run over 241 events.
+Job 163 Destination: ['T2_CH_CERN']
+Job 164 can run over 241 events.
+Job 164 Destination: ['T2_CH_CERN']
+Job 165 can run over 241 events.
+Job 165 Destination: ['T2_CH_CERN']
+Job 166 can run over 241 events.
+Job 166 Destination: ['T2_CH_CERN']
+Job 167 can run over 241 events.
+Job 167 Destination: ['T2_CH_CERN']
+Job 168 can run over 241 events.
+Job 168 Destination: ['T2_CH_CERN']
+Job 169 can run over 241 events.
+Job 169 Destination: ['T2_CH_CERN']
+Job 170 can run over 241 events.
+Job 170 Destination: ['T2_CH_CERN']
+Job 171 can run over 241 events.
+Job 171 Destination: ['T2_CH_CERN']
+Job 172 can run over 241 events.
+Job 172 Destination: ['T2_CH_CERN']
+Job 173 can run over 241 events.
+Job 173 Destination: ['T2_CH_CERN']
+Job 174 can run over 241 events.
+Job 174 Destination: ['T2_CH_CERN']
+Job 175 can run over 241 events.
+Job 175 Destination: ['T2_CH_CERN']
+Job 176 can run over 241 events.
+Job 176 Destination: ['T2_CH_CERN']
+Job 177 can run over 241 events.
+Job 177 Destination: ['T2_CH_CERN']
+Job 178 can run over 241 events.
+Job 178 Destination: ['T2_CH_CERN']
+Job 179 can run over 241 events.
+Job 179 Destination: ['T2_CH_CERN']
+Job 180 can run over 241 events.
+Job 180 Destination: ['T2_CH_CERN']
+Job 181 can run over 241 events.
+Job 181 Destination: ['T2_CH_CERN']
+Job 182 can run over 241 events.
+Job 182 Destination: ['T2_CH_CERN']
+Job 183 can run over 241 events.
+Job 183 Destination: ['T2_CH_CERN']
+Job 184 can run over 241 events.
+Job 184 Destination: ['T2_CH_CERN']
+Job 185 can run over 241 events.
+Job 185 Destination: ['T2_CH_CERN']
+Job 186 can run over 241 events.
+Job 186 Destination: ['T2_CH_CERN']
+Job 187 can run over 241 events.
+Job 187 Destination: ['T2_CH_CERN']
+Job 188 can run over 241 events.
+Job 188 Destination: ['T2_CH_CERN']
+Job 189 can run over 241 events.
+Job 189 Destination: ['T2_CH_CERN']
+Job 190 can run over 241 events.
+Job 190 Destination: ['T2_CH_CERN']
+Job 191 can run over 241 events.
+Job 191 Destination: ['T2_CH_CERN']
+Job 192 can run over 241 events.
+Job 192 Destination: ['T2_CH_CERN']
+Job 193 can run over 241 events.
+Job 193 Destination: ['T2_CH_CERN']
+Job 194 can run over 241 events.
+Job 194 Destination: ['T2_CH_CERN']
+Job 195 can run over 241 events.
+Job 195 Destination: ['T2_CH_CERN']
+Job 196 can run over 241 events.
+Job 196 Destination: ['T2_CH_CERN']
+Job 197 can run over 241 events.
+Job 197 Destination: ['T2_CH_CERN']
+Job 198 can run over 241 events.
+Job 198 Destination: ['T2_CH_CERN']
+Job 199 can run over 241 events.
+Job 199 Destination: ['T2_CH_CERN']
+Job 200 can run over 241 events.
+Job 200 Destination: ['T2_CH_CERN']
+Job 201 can run over 171 events.
+Job 201 Destination: ['T2_CH_CERN']
+
+2014-12-04 12:17:21,065 [INFO] 	201 job(s) can run on 48200 events.
+
+2014-12-04 12:17:21,066 [INFO] 	List of jobs and available destination sites:
+
+Block     1: jobs                 1-14: sites: T2_CH_CERN
+Block     2: jobs                15-31: sites: T2_CH_CERN
+Block     3: jobs               32-201: sites: T2_CH_CERN
+
+2014-12-04 12:17:21,126 [DEBUG] 	PsetManipulator::__init__: PSet file = PFClusterJets_version1.py
+2014-12-04 12:17:46,520 [INFO] 	Adding PFL2_out_All10000Events.root (from PoolOutputModule) to list of output files
+2014-12-04 12:17:46,608 [DEBUG] 	lib /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/lib to be tarred
+2014-12-04 12:17:46,669 [DEBUG] 	data RecoJets/JetProducers/data to be tarred
+2014-12-04 12:17:48,095 [DEBUG] 	Creator: JobType CMSSW created
+2014-12-04 12:17:48,095 [DEBUG] 	Creator: total # of jobs = 201
+2014-12-04 12:17:48,095 [DEBUG] 	Creator constructor finished
+2014-12-04 12:17:49,768 [DEBUG] 	Creator::run() called
+2014-12-04 12:17:49,770 [DEBUG] 	Scram::Scram() version is 2
+2014-12-04 12:17:49,770 [DEBUG] 	Scram::Scram() arch is slc6_amd64_gcc481
+2014-12-04 12:17:51,063 [INFO] 	output files will be staged at cmseos.fnal.gov
+       with LFN's starting with = /store/user/yxin/Service/
+2014-12-04 12:17:51,250 [INFO] 	Checking remote location
+2014-12-04 12:17:51,250 [DEBUG] 	protocol = srm-lcg
+endpoint = srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms//store/user/yxin/Service/
+
+2014-12-04 12:17:51,916 [DEBUG] 	Command:	eval `scram unsetenv -sh` ; lcg-ls -d -b -D srmv2 srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms//store/user/yxin/Service/
+2014-12-04 12:17:51,917 [DEBUG] 	ExitCode:	1
+2014-12-04 12:17:51,917 [DEBUG] 	Output:	/eos/uscms//store/user/yxin/Service/: [SE][Ls][SRM_INVALID_PATH] No such file or directory.
+
+2014-12-04 12:17:52,469 [INFO] 	Creating 201 jobs, please wait...
+2014-12-04 12:17:52,469 [DEBUG] 	Creation Time: 2.70013594627
+2014-12-04 12:17:52,469 [INFO] 	Total of 201 jobs created.
+
+2014-12-04 12:18:24,522 [DEBUG] 	/cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -submit -c ServiceWork/
+
+2014-12-04 12:18:24,522 [INFO] 	Version 2.11.1_patch1 running on Thu Dec  4 12:18:24 2014 CST (18:18:24 UTC)
+
+crab. Working options:
+	scheduler           remoteGlidein
+	job type            CMSSW
+	server              OFF
+	working directory   /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork/
+
+2014-12-04 12:18:24,523 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/allowed_releases.conf].
+2014-12-04 12:18:24,739 [DEBUG] 	Input whitelist: 
+2014-12-04 12:18:24,740 [DEBUG] 	Input blacklist: 
+2014-12-04 12:18:24,740 [DEBUG] 	Converted whitelist: 
+2014-12-04 12:18:24,740 [DEBUG] 	Converted blacklist: 
+2014-12-04 12:18:26,821 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:18:26,823 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2014-12-04 12:18:28,775 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:18:28,776 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2 
+2014-12-04 12:18:28,776 [INFO] 	PSN black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+2014-12-04 12:18:28,788 [DEBUG] 	parseRange_ None
+2014-12-04 12:18:28,903 [DEBUG] 	Scram::Scram() version is 2
+2014-12-04 12:18:28,904 [DEBUG] 	Scram::Scram() arch is slc6_amd64_gcc481
+2014-12-04 12:18:29,009 [DEBUG] 	Submitter::run() called
+2014-12-04 12:18:29,114 [DEBUG] 	nsjobs -1
+2014-12-04 12:18:29,114 [DEBUG] 	Total jobs 201
+2014-12-04 12:18:29,222 [DEBUG] 	nj_list [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201]
+2014-12-04 12:18:29,624 [DEBUG] 	GRIDNAME: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=yxin/CN=728251/CN=Yongjie Xin 
+2014-12-04 12:18:30,165 [DEBUG] 	Submission DashBoard Pre-Submission report: {'ApplicationVersion': 'CMSSW_7_3_0_pre3', 'taskId': 'yxin_ServiceWork_k7w93h', 'resubmitter': 'user', 'tool': 'crab2', 'vo': 'cms', 'tool_ui': 'cmslpc26.fnal.gov', 'JSToolVersion': '2.11.1_patch1', 'user': 'yxin', 'scheduler': 'GLIDEIN', 'taskType': 'analysis', 'CMSUser': 'yxin', 'jobId': 'TaskMeta', 'datasetFull': '/RelValQCD_FlatPt_15_3000HS_13/CMSSW_7_3_0_pre3-MCRUN2_73_V5-v1/GEN-SIM-RECO', 'exe': 'cmsRun', 'GridName': '/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=yxin/CN=728251/CN=Yongjie Xin', 'SubmissionType': 'direct'}
+2014-12-04 12:18:30,166 [INFO] 	Checking available resources...
+2014-12-04 12:18:30,304 [INFO] 	Found  compatible site(s) for job 1
+2014-12-04 12:18:30,305 [INFO] 	1 blocks of jobs will be submitted
+2014-12-04 12:18:30,306 [DEBUG] 	Delegating proxy 
+2014-12-04 12:18:30,306 [DEBUG] 	Submitting jobs [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201]
+2014-12-04 12:18:30,626 [DEBUG] 	Calling ServerConfig default
+2014-12-04 12:18:30,626 [DEBUG] 	getting serverlist from web
+2014-12-04 12:18:30,626 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/AvailableServerList].
+2014-12-04 12:18:30,628 [DEBUG] 	All avaialble servers: [['cern_vocms20', '2.8.4-', 'remoteGlidein'], ['cern_vocms83', '2.8.4-', 'remoteGlidein'], ['ucsd_submit-4', '2.8.4-', 'remoteGlidein'], ['ucsd_submit-4', '2.8.4-', 'remoteGlidein'], ['ucsd_submit-4', '2.8.4-', 'remoteGlidein'], ['ucsd_submit-6', '2.8.4-', 'remoteGlidein'], ['ucsd_submit-6', '2.8.4-', 'remoteGlidein'], ['ucsd_submit-6', '2.8.4-', 'remoteGlidein']]
+2014-12-04 12:18:30,628 [DEBUG] 	All avaialble servers compatible with 2.11.1_patch1: ['cern_vocms20', 'cern_vocms83', 'ucsd_submit-4', 'ucsd_submit-4', 'ucsd_submit-4', 'ucsd_submit-6', 'ucsd_submit-6', 'ucsd_submit-6']
+2014-12-04 12:18:30,628 [DEBUG] 	Avaialble servers: ['cern_vocms20', 'cern_vocms83', 'ucsd_submit-4', 'ucsd_submit-4', 'ucsd_submit-4', 'ucsd_submit-6', 'ucsd_submit-6', 'ucsd_submit-6'] choosen: ucsd_submit-4
+2014-12-04 12:18:30,628 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/server_ucsd_submit-4.conf].
+2014-12-04 12:18:30,629 [DEBUG] 	/uscms/home/yongjie/.cms_crab/0_GET_server_ucsd_submit-4.conf expired, refreshing cache
+2014-12-04 12:18:30,629 [DEBUG] 	getData: 
+	url: /cms/LCG/crab/config/server_ucsd_submit-4.conf
+	data: {}
+2014-12-04 12:18:30,868 [INFO] 	remotehost from Avail.List = submit-4.t2.ucsd.edu
+2014-12-04 12:18:31,073 [INFO] 	list of PSN's for submission: T2_CH_CERN
+2014-12-04 12:18:31,073 [DEBUG] 	Scram::Scram() version is 2
+2014-12-04 12:18:31,073 [DEBUG] 	Scram::Scram() arch is slc6_amd64_gcc481
+2014-12-04 12:18:31,676 [INFO] 	contacting remote host submit-4.t2.ucsd.edu
+2014-12-04 12:18:32,091 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh  -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-4.t2.ucsd.edu  "sleep 3600"
+2014-12-04 12:18:32,095 [INFO] 	Establishing gsissh ControlPath. Wait 2 sec ...
+2014-12-04 12:18:34,109 [INFO] 	COPY FILES TO REMOTE HOST
+2014-12-04 12:18:34,110 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-4.t2.ucsd.edu  mkdir -p yxin_ServiceWork_k7w93h
+2014-12-04 12:18:34,482 [DEBUG] 	Status,output= 0,
+2014-12-04 12:18:34,483 [DEBUG] 	Execute command :
+gsiscp -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork/share/default.tgz /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork/share/arguments.xml /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork/job/CMSSW.sh /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//share//yxin_ServiceWork_k7w93h_job201.jdl /tmp/x509up_u45880 submit-4.t2.ucsd.edu:yxin_ServiceWork_k7w93h
+2014-12-04 12:18:36,454 [DEBUG] 	Status,output= 0,
+2014-12-04 12:18:36,454 [INFO] 	SUBMIT TO REMOTE GLIDEIN FRONTEND
+2014-12-04 12:18:36,454 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-4.t2.ucsd.edu "cd yxin_ServiceWork_k7w93h;  condor_submit  yxin_ServiceWork_k7w93h_job201.jdl; echo 'CONDOR_SUBMIT-EXIT-STATUS IS' \$?"
+2014-12-04 12:18:39,703 [DEBUG] 	Status,output= 0,Submitting job(s).........................................................................................................................................................................................................
+201 job(s) submitted to cluster 533307.
+CONDOR_SUBMIT-EXIT-STATUS IS 0
+2014-12-04 12:18:39,708 [DEBUG] 	Returning {u'yxin_ServiceWork_k7w93h_job184': 'submit-4.t2.ucsd.edu//141204//533307.183', u'yxin_ServiceWork_k7w93h_job48': 'submit-4.t2.ucsd.edu//141204//533307.47', u'yxin_ServiceWork_k7w93h_job49': 'submit-4.t2.ucsd.edu//141204//533307.48', u'yxin_ServiceWork_k7w93h_job46': 'submit-4.t2.ucsd.edu//141204//533307.45', u'yxin_ServiceWork_k7w93h_job47': 'submit-4.t2.ucsd.edu//141204//533307.46', u'yxin_ServiceWork_k7w93h_job44': 'submit-4.t2.ucsd.edu//141204//533307.43', u'yxin_ServiceWork_k7w93h_job45': 'submit-4.t2.ucsd.edu//141204//533307.44', u'yxin_ServiceWork_k7w93h_job42': 'submit-4.t2.ucsd.edu//141204//533307.41', u'yxin_ServiceWork_k7w93h_job43': 'submit-4.t2.ucsd.edu//141204//533307.42', u'yxin_ServiceWork_k7w93h_job40': 'submit-4.t2.ucsd.edu//141204//533307.39', u'yxin_ServiceWork_k7w93h_job41': 'submit-4.t2.ucsd.edu//141204//533307.40', u'yxin_ServiceWork_k7w93h_job199': 'submit-4.t2.ucsd.edu//141204//533307.198', u'yxin_ServiceWork_k7w93h_job188': 'submit-4.t2.ucsd.edu//141204//533307.187', u'yxin_ServiceWork_k7w93h_job189': 'submit-4.t2.ucsd.edu//141204//533307.188', u'yxin_ServiceWork_k7w93h_job124': 'submit-4.t2.ucsd.edu//141204//533307.123', u'yxin_ServiceWork_k7w93h_job125': 'submit-4.t2.ucsd.edu//141204//533307.124', u'yxin_ServiceWork_k7w93h_job126': 'submit-4.t2.ucsd.edu//141204//533307.125', u'yxin_ServiceWork_k7w93h_job127': 'submit-4.t2.ucsd.edu//141204//533307.126', u'yxin_ServiceWork_k7w93h_job120': 'submit-4.t2.ucsd.edu//141204//533307.119', u'yxin_ServiceWork_k7w93h_job121': 'submit-4.t2.ucsd.edu//141204//533307.120', u'yxin_ServiceWork_k7w93h_job122': 'submit-4.t2.ucsd.edu//141204//533307.121', u'yxin_ServiceWork_k7w93h_job123': 'submit-4.t2.ucsd.edu//141204//533307.122', u'yxin_ServiceWork_k7w93h_job128': 'submit-4.t2.ucsd.edu//141204//533307.127', u'yxin_ServiceWork_k7w93h_job129': 'submit-4.t2.ucsd.edu//141204//533307.128', u'yxin_ServiceWork_k7w93h_job79': 'submit-4.t2.ucsd.edu//141204//533307.78', u'yxin_ServiceWork_k7w93h_job78': 'submit-4.t2.ucsd.edu//141204//533307.77', u'yxin_ServiceWork_k7w93h_job73': 'submit-4.t2.ucsd.edu//141204//533307.72', u'yxin_ServiceWork_k7w93h_job72': 'submit-4.t2.ucsd.edu//141204//533307.71', u'yxin_ServiceWork_k7w93h_job71': 'submit-4.t2.ucsd.edu//141204//533307.70', u'yxin_ServiceWork_k7w93h_job70': 'submit-4.t2.ucsd.edu//141204//533307.69', u'yxin_ServiceWork_k7w93h_job77': 'submit-4.t2.ucsd.edu//141204//533307.76', u'yxin_ServiceWork_k7w93h_job76': 'submit-4.t2.ucsd.edu//141204//533307.75', u'yxin_ServiceWork_k7w93h_job75': 'submit-4.t2.ucsd.edu//141204//533307.74', u'yxin_ServiceWork_k7w93h_job74': 'submit-4.t2.ucsd.edu//141204//533307.73', u'yxin_ServiceWork_k7w93h_job160': 'submit-4.t2.ucsd.edu//141204//533307.159', u'yxin_ServiceWork_k7w93h_job185': 'submit-4.t2.ucsd.edu//141204//533307.184', u'yxin_ServiceWork_k7w93h_job133': 'submit-4.t2.ucsd.edu//141204//533307.132', u'yxin_ServiceWork_k7w93h_job132': 'submit-4.t2.ucsd.edu//141204//533307.131', u'yxin_ServiceWork_k7w93h_job131': 'submit-4.t2.ucsd.edu//141204//533307.130', u'yxin_ServiceWork_k7w93h_job130': 'submit-4.t2.ucsd.edu//141204//533307.129', u'yxin_ServiceWork_k7w93h_job137': 'submit-4.t2.ucsd.edu//141204//533307.136', u'yxin_ServiceWork_k7w93h_job136': 'submit-4.t2.ucsd.edu//141204//533307.135', u'yxin_ServiceWork_k7w93h_job135': 'submit-4.t2.ucsd.edu//141204//533307.134', u'yxin_ServiceWork_k7w93h_job134': 'submit-4.t2.ucsd.edu//141204//533307.133', u'yxin_ServiceWork_k7w93h_job139': 'submit-4.t2.ucsd.edu//141204//533307.138', u'yxin_ServiceWork_k7w93h_job138': 'submit-4.t2.ucsd.edu//141204//533307.137', u'yxin_ServiceWork_k7w93h_job161': 'submit-4.t2.ucsd.edu//141204//533307.160', u'yxin_ServiceWork_k7w93h_job64': 'submit-4.t2.ucsd.edu//141204//533307.63', u'yxin_ServiceWork_k7w93h_job65': 'submit-4.t2.ucsd.edu//141204//533307.64', u'yxin_ServiceWork_k7w93h_job66': 'submit-4.t2.ucsd.edu//141204//533307.65', u'yxin_ServiceWork_k7w93h_job67': 'submit-4.t2.ucsd.edu//141204//533307.66', u'yxin_ServiceWork_k7w93h_job60': 'submit-4.t2.ucsd.edu//141204//533307.59', u'yxin_ServiceWork_k7w93h_job61': 'submit-4.t2.ucsd.edu//141204//533307.60', u'yxin_ServiceWork_k7w93h_job62': 'submit-4.t2.ucsd.edu//141204//533307.61', u'yxin_ServiceWork_k7w93h_job63': 'submit-4.t2.ucsd.edu//141204//533307.62', u'yxin_ServiceWork_k7w93h_job68': 'submit-4.t2.ucsd.edu//141204//533307.67', u'yxin_ServiceWork_k7w93h_job69': 'submit-4.t2.ucsd.edu//141204//533307.68', u'yxin_ServiceWork_k7w93h_job146': 'submit-4.t2.ucsd.edu//141204//533307.145', u'yxin_ServiceWork_k7w93h_job147': 'submit-4.t2.ucsd.edu//141204//533307.146', u'yxin_ServiceWork_k7w93h_job144': 'submit-4.t2.ucsd.edu//141204//533307.143', u'yxin_ServiceWork_k7w93h_job145': 'submit-4.t2.ucsd.edu//141204//533307.144', u'yxin_ServiceWork_k7w93h_job142': 'submit-4.t2.ucsd.edu//141204//533307.141', u'yxin_ServiceWork_k7w93h_job143': 'submit-4.t2.ucsd.edu//141204//533307.142', u'yxin_ServiceWork_k7w93h_job140': 'submit-4.t2.ucsd.edu//141204//533307.139', u'yxin_ServiceWork_k7w93h_job141': 'submit-4.t2.ucsd.edu//141204//533307.140', u'yxin_ServiceWork_k7w93h_job148': 'submit-4.t2.ucsd.edu//141204//533307.147', u'yxin_ServiceWork_k7w93h_job149': 'submit-4.t2.ucsd.edu//141204//533307.148', u'yxin_ServiceWork_k7w93h_job9': 'submit-4.t2.ucsd.edu//141204//533307.8', u'yxin_ServiceWork_k7w93h_job8': 'submit-4.t2.ucsd.edu//141204//533307.7', u'yxin_ServiceWork_k7w93h_job1': 'submit-4.t2.ucsd.edu//141204//533307.0', u'yxin_ServiceWork_k7w93h_job3': 'submit-4.t2.ucsd.edu//141204//533307.2', u'yxin_ServiceWork_k7w93h_job2': 'submit-4.t2.ucsd.edu//141204//533307.1', u'yxin_ServiceWork_k7w93h_job5': 'submit-4.t2.ucsd.edu//141204//533307.4', u'yxin_ServiceWork_k7w93h_job4': 'submit-4.t2.ucsd.edu//141204//533307.3', u'yxin_ServiceWork_k7w93h_job7': 'submit-4.t2.ucsd.edu//141204//533307.6', u'yxin_ServiceWork_k7w93h_job6': 'submit-4.t2.ucsd.edu//141204//533307.5', u'yxin_ServiceWork_k7w93h_job11': 'submit-4.t2.ucsd.edu//141204//533307.10', u'yxin_ServiceWork_k7w93h_job10': 'submit-4.t2.ucsd.edu//141204//533307.9', u'yxin_ServiceWork_k7w93h_job13': 'submit-4.t2.ucsd.edu//141204//533307.12', u'yxin_ServiceWork_k7w93h_job12': 'submit-4.t2.ucsd.edu//141204//533307.11', u'yxin_ServiceWork_k7w93h_job15': 'submit-4.t2.ucsd.edu//141204//533307.14', u'yxin_ServiceWork_k7w93h_job14': 'submit-4.t2.ucsd.edu//141204//533307.13', u'yxin_ServiceWork_k7w93h_job17': 'submit-4.t2.ucsd.edu//141204//533307.16', u'yxin_ServiceWork_k7w93h_job16': 'submit-4.t2.ucsd.edu//141204//533307.15', u'yxin_ServiceWork_k7w93h_job19': 'submit-4.t2.ucsd.edu//141204//533307.18', u'yxin_ServiceWork_k7w93h_job18': 'submit-4.t2.ucsd.edu//141204//533307.17', u'yxin_ServiceWork_k7w93h_job155': 'submit-4.t2.ucsd.edu//141204//533307.154', u'yxin_ServiceWork_k7w93h_job154': 'submit-4.t2.ucsd.edu//141204//533307.153', u'yxin_ServiceWork_k7w93h_job157': 'submit-4.t2.ucsd.edu//141204//533307.156', u'yxin_ServiceWork_k7w93h_job156': 'submit-4.t2.ucsd.edu//141204//533307.155', u'yxin_ServiceWork_k7w93h_job151': 'submit-4.t2.ucsd.edu//141204//533307.150', u'yxin_ServiceWork_k7w93h_job150': 'submit-4.t2.ucsd.edu//141204//533307.149', u'yxin_ServiceWork_k7w93h_job153': 'submit-4.t2.ucsd.edu//141204//533307.152', u'yxin_ServiceWork_k7w93h_job152': 'submit-4.t2.ucsd.edu//141204//533307.151', u'yxin_ServiceWork_k7w93h_job159': 'submit-4.t2.ucsd.edu//141204//533307.158', u'yxin_ServiceWork_k7w93h_job158': 'submit-4.t2.ucsd.edu//141204//533307.157', u'yxin_ServiceWork_k7w93h_job168': 'submit-4.t2.ucsd.edu//141204//533307.167', u'yxin_ServiceWork_k7w93h_job169': 'submit-4.t2.ucsd.edu//141204//533307.168', u'yxin_ServiceWork_k7w93h_job198': 'submit-4.t2.ucsd.edu//141204//533307.197', u'yxin_ServiceWork_k7w93h_job99': 'submit-4.t2.ucsd.edu//141204//533307.98', u'yxin_ServiceWork_k7w93h_job98': 'submit-4.t2.ucsd.edu//141204//533307.97', u'yxin_ServiceWork_k7w93h_job162': 'submit-4.t2.ucsd.edu//141204//533307.161', u'yxin_ServiceWork_k7w93h_job163': 'submit-4.t2.ucsd.edu//141204//533307.162', u'yxin_ServiceWork_k7w93h_job164': 'submit-4.t2.ucsd.edu//141204//533307.163', u'yxin_ServiceWork_k7w93h_job165': 'submit-4.t2.ucsd.edu//141204//533307.164', u'yxin_ServiceWork_k7w93h_job166': 'submit-4.t2.ucsd.edu//141204//533307.165', u'yxin_ServiceWork_k7w93h_job167': 'submit-4.t2.ucsd.edu//141204//533307.166', u'yxin_ServiceWork_k7w93h_job91': 'submit-4.t2.ucsd.edu//141204//533307.90', u'yxin_ServiceWork_k7w93h_job90': 'submit-4.t2.ucsd.edu//141204//533307.89', u'yxin_ServiceWork_k7w93h_job93': 'submit-4.t2.ucsd.edu//141204//533307.92', u'yxin_ServiceWork_k7w93h_job92': 'submit-4.t2.ucsd.edu//141204//533307.91', u'yxin_ServiceWork_k7w93h_job95': 'submit-4.t2.ucsd.edu//141204//533307.94', u'yxin_ServiceWork_k7w93h_job94': 'submit-4.t2.ucsd.edu//141204//533307.93', u'yxin_ServiceWork_k7w93h_job97': 'submit-4.t2.ucsd.edu//141204//533307.96', u'yxin_ServiceWork_k7w93h_job96': 'submit-4.t2.ucsd.edu//141204//533307.95', u'yxin_ServiceWork_k7w93h_job182': 'submit-4.t2.ucsd.edu//141204//533307.181', u'yxin_ServiceWork_k7w93h_job183': 'submit-4.t2.ucsd.edu//141204//533307.182', u'yxin_ServiceWork_k7w93h_job180': 'submit-4.t2.ucsd.edu//141204//533307.179', u'yxin_ServiceWork_k7w93h_job181': 'submit-4.t2.ucsd.edu//141204//533307.180', u'yxin_ServiceWork_k7w93h_job186': 'submit-4.t2.ucsd.edu//141204//533307.185', u'yxin_ServiceWork_k7w93h_job187': 'submit-4.t2.ucsd.edu//141204//533307.186', u'yxin_ServiceWork_k7w93h_job39': 'submit-4.t2.ucsd.edu//141204//533307.38', u'yxin_ServiceWork_k7w93h_job38': 'submit-4.t2.ucsd.edu//141204//533307.37', u'yxin_ServiceWork_k7w93h_job37': 'submit-4.t2.ucsd.edu//141204//533307.36', u'yxin_ServiceWork_k7w93h_job36': 'submit-4.t2.ucsd.edu//141204//533307.35', u'yxin_ServiceWork_k7w93h_job35': 'submit-4.t2.ucsd.edu//141204//533307.34', u'yxin_ServiceWork_k7w93h_job34': 'submit-4.t2.ucsd.edu//141204//533307.33', u'yxin_ServiceWork_k7w93h_job33': 'submit-4.t2.ucsd.edu//141204//533307.32', u'yxin_ServiceWork_k7w93h_job32': 'submit-4.t2.ucsd.edu//141204//533307.31', u'yxin_ServiceWork_k7w93h_job31': 'submit-4.t2.ucsd.edu//141204//533307.30', u'yxin_ServiceWork_k7w93h_job30': 'submit-4.t2.ucsd.edu//141204//533307.29', u'yxin_ServiceWork_k7w93h_job191': 'submit-4.t2.ucsd.edu//141204//533307.190', u'yxin_ServiceWork_k7w93h_job88': 'submit-4.t2.ucsd.edu//141204//533307.87', u'yxin_ServiceWork_k7w93h_job89': 'submit-4.t2.ucsd.edu//141204//533307.88', u'yxin_ServiceWork_k7w93h_job190': 'submit-4.t2.ucsd.edu//141204//533307.189', u'yxin_ServiceWork_k7w93h_job82': 'submit-4.t2.ucsd.edu//141204//533307.81', u'yxin_ServiceWork_k7w93h_job83': 'submit-4.t2.ucsd.edu//141204//533307.82', u'yxin_ServiceWork_k7w93h_job80': 'submit-4.t2.ucsd.edu//141204//533307.79', u'yxin_ServiceWork_k7w93h_job81': 'submit-4.t2.ucsd.edu//141204//533307.80', u'yxin_ServiceWork_k7w93h_job86': 'submit-4.t2.ucsd.edu//141204//533307.85', u'yxin_ServiceWork_k7w93h_job87': 'submit-4.t2.ucsd.edu//141204//533307.86', u'yxin_ServiceWork_k7w93h_job84': 'submit-4.t2.ucsd.edu//141204//533307.83', u'yxin_ServiceWork_k7w93h_job85': 'submit-4.t2.ucsd.edu//141204//533307.84', u'yxin_ServiceWork_k7w93h_job179': 'submit-4.t2.ucsd.edu//141204//533307.178', u'yxin_ServiceWork_k7w93h_job178': 'submit-4.t2.ucsd.edu//141204//533307.177', u'yxin_ServiceWork_k7w93h_job177': 'submit-4.t2.ucsd.edu//141204//533307.176', u'yxin_ServiceWork_k7w93h_job176': 'submit-4.t2.ucsd.edu//141204//533307.175', u'yxin_ServiceWork_k7w93h_job175': 'submit-4.t2.ucsd.edu//141204//533307.174', u'yxin_ServiceWork_k7w93h_job174': 'submit-4.t2.ucsd.edu//141204//533307.173', u'yxin_ServiceWork_k7w93h_job173': 'submit-4.t2.ucsd.edu//141204//533307.172', u'yxin_ServiceWork_k7w93h_job172': 'submit-4.t2.ucsd.edu//141204//533307.171', u'yxin_ServiceWork_k7w93h_job171': 'submit-4.t2.ucsd.edu//141204//533307.170', u'yxin_ServiceWork_k7w93h_job170': 'submit-4.t2.ucsd.edu//141204//533307.169', u'yxin_ServiceWork_k7w93h_job28': 'submit-4.t2.ucsd.edu//141204//533307.27', u'yxin_ServiceWork_k7w93h_job29': 'submit-4.t2.ucsd.edu//141204//533307.28', u'yxin_ServiceWork_k7w93h_job193': 'submit-4.t2.ucsd.edu//141204//533307.192', u'yxin_ServiceWork_k7w93h_job192': 'submit-4.t2.ucsd.edu//141204//533307.191', u'yxin_ServiceWork_k7w93h_job195': 'submit-4.t2.ucsd.edu//141204//533307.194', u'yxin_ServiceWork_k7w93h_job194': 'submit-4.t2.ucsd.edu//141204//533307.193', u'yxin_ServiceWork_k7w93h_job197': 'submit-4.t2.ucsd.edu//141204//533307.196', u'yxin_ServiceWork_k7w93h_job196': 'submit-4.t2.ucsd.edu//141204//533307.195', u'yxin_ServiceWork_k7w93h_job20': 'submit-4.t2.ucsd.edu//141204//533307.19', u'yxin_ServiceWork_k7w93h_job21': 'submit-4.t2.ucsd.edu//141204//533307.20', u'yxin_ServiceWork_k7w93h_job22': 'submit-4.t2.ucsd.edu//141204//533307.21', u'yxin_ServiceWork_k7w93h_job23': 'submit-4.t2.ucsd.edu//141204//533307.22', u'yxin_ServiceWork_k7w93h_job24': 'submit-4.t2.ucsd.edu//141204//533307.23', u'yxin_ServiceWork_k7w93h_job25': 'submit-4.t2.ucsd.edu//141204//533307.24', u'yxin_ServiceWork_k7w93h_job26': 'submit-4.t2.ucsd.edu//141204//533307.25', u'yxin_ServiceWork_k7w93h_job27': 'submit-4.t2.ucsd.edu//141204//533307.26', u'yxin_ServiceWork_k7w93h_job108': 'submit-4.t2.ucsd.edu//141204//533307.107', u'yxin_ServiceWork_k7w93h_job109': 'submit-4.t2.ucsd.edu//141204//533307.108', u'yxin_ServiceWork_k7w93h_job102': 'submit-4.t2.ucsd.edu//141204//533307.101', u'yxin_ServiceWork_k7w93h_job103': 'submit-4.t2.ucsd.edu//141204//533307.102', u'yxin_ServiceWork_k7w93h_job100': 'submit-4.t2.ucsd.edu//141204//533307.99', u'yxin_ServiceWork_k7w93h_job101': 'submit-4.t2.ucsd.edu//141204//533307.100', u'yxin_ServiceWork_k7w93h_job106': 'submit-4.t2.ucsd.edu//141204//533307.105', u'yxin_ServiceWork_k7w93h_job107': 'submit-4.t2.ucsd.edu//141204//533307.106', u'yxin_ServiceWork_k7w93h_job104': 'submit-4.t2.ucsd.edu//141204//533307.103', u'yxin_ServiceWork_k7w93h_job105': 'submit-4.t2.ucsd.edu//141204//533307.104', u'yxin_ServiceWork_k7w93h_job59': 'submit-4.t2.ucsd.edu//141204//533307.58', u'yxin_ServiceWork_k7w93h_job58': 'submit-4.t2.ucsd.edu//141204//533307.57', u'yxin_ServiceWork_k7w93h_job55': 'submit-4.t2.ucsd.edu//141204//533307.54', u'yxin_ServiceWork_k7w93h_job54': 'submit-4.t2.ucsd.edu//141204//533307.53', u'yxin_ServiceWork_k7w93h_job57': 'submit-4.t2.ucsd.edu//141204//533307.56', u'yxin_ServiceWork_k7w93h_job56': 'submit-4.t2.ucsd.edu//141204//533307.55', u'yxin_ServiceWork_k7w93h_job51': 'submit-4.t2.ucsd.edu//141204//533307.50', u'yxin_ServiceWork_k7w93h_job50': 'submit-4.t2.ucsd.edu//141204//533307.49', u'yxin_ServiceWork_k7w93h_job53': 'submit-4.t2.ucsd.edu//141204//533307.52', u'yxin_ServiceWork_k7w93h_job52': 'submit-4.t2.ucsd.edu//141204//533307.51', u'yxin_ServiceWork_k7w93h_job201': 'submit-4.t2.ucsd.edu//141204//533307.200', u'yxin_ServiceWork_k7w93h_job200': 'submit-4.t2.ucsd.edu//141204//533307.199', u'yxin_ServiceWork_k7w93h_job119': 'submit-4.t2.ucsd.edu//141204//533307.118', u'yxin_ServiceWork_k7w93h_job118': 'submit-4.t2.ucsd.edu//141204//533307.117', u'yxin_ServiceWork_k7w93h_job111': 'submit-4.t2.ucsd.edu//141204//533307.110', u'yxin_ServiceWork_k7w93h_job110': 'submit-4.t2.ucsd.edu//141204//533307.109', u'yxin_ServiceWork_k7w93h_job113': 'submit-4.t2.ucsd.edu//141204//533307.112', u'yxin_ServiceWork_k7w93h_job112': 'submit-4.t2.ucsd.edu//141204//533307.111', u'yxin_ServiceWork_k7w93h_job115': 'submit-4.t2.ucsd.edu//141204//533307.114', u'yxin_ServiceWork_k7w93h_job114': 'submit-4.t2.ucsd.edu//141204//533307.113', u'yxin_ServiceWork_k7w93h_job117': 'submit-4.t2.ucsd.edu//141204//533307.116', u'yxin_ServiceWork_k7w93h_job116': 'submit-4.t2.ucsd.edu//141204//533307.115'}
+yxin_ServiceWork_k7w93h
+cmslpc26.fnal.gov
+2014-12-04 12:18:39,830 [DEBUG] 	WMS : cmslpc26.fnal.gov
+Collection ID : yxin_ServiceWork_k7w93h
+2014-12-04 12:18:39,933 [DEBUG] 	Submitted job # 1
+2014-12-04 12:18:39,933 [DEBUG] 	Submitted job # 2
+2014-12-04 12:18:39,933 [DEBUG] 	Submitted job # 3
+2014-12-04 12:18:39,934 [DEBUG] 	Submitted job # 4
+2014-12-04 12:18:39,934 [DEBUG] 	Submitted job # 5
+2014-12-04 12:18:39,934 [DEBUG] 	Submitted job # 6
+2014-12-04 12:18:39,934 [DEBUG] 	Submitted job # 7
+2014-12-04 12:18:39,934 [DEBUG] 	Submitted job # 8
+2014-12-04 12:18:39,934 [DEBUG] 	Submitted job # 9
+2014-12-04 12:18:39,934 [DEBUG] 	Submitted job # 10
+2014-12-04 12:18:39,934 [DEBUG] 	Submitted job # 11
+2014-12-04 12:18:39,934 [DEBUG] 	Submitted job # 12
+2014-12-04 12:18:39,935 [DEBUG] 	Submitted job # 13
+2014-12-04 12:18:39,935 [DEBUG] 	Submitted job # 14
+2014-12-04 12:18:39,935 [DEBUG] 	Submitted job # 15
+2014-12-04 12:18:39,935 [DEBUG] 	Submitted job # 16
+2014-12-04 12:18:39,935 [DEBUG] 	Submitted job # 17
+2014-12-04 12:18:39,935 [DEBUG] 	Submitted job # 18
+2014-12-04 12:18:39,935 [DEBUG] 	Submitted job # 19
+2014-12-04 12:18:39,935 [DEBUG] 	Submitted job # 20
+2014-12-04 12:18:39,935 [DEBUG] 	Submitted job # 21
+2014-12-04 12:18:39,936 [DEBUG] 	Submitted job # 22
+2014-12-04 12:18:39,936 [DEBUG] 	Submitted job # 23
+2014-12-04 12:18:39,936 [DEBUG] 	Submitted job # 24
+2014-12-04 12:18:39,936 [DEBUG] 	Submitted job # 25
+2014-12-04 12:18:39,936 [DEBUG] 	Submitted job # 26
+2014-12-04 12:18:39,936 [DEBUG] 	Submitted job # 27
+2014-12-04 12:18:39,936 [DEBUG] 	Submitted job # 28
+2014-12-04 12:18:39,936 [DEBUG] 	Submitted job # 29
+2014-12-04 12:18:39,936 [DEBUG] 	Submitted job # 30
+2014-12-04 12:18:39,937 [DEBUG] 	Submitted job # 31
+2014-12-04 12:18:39,937 [DEBUG] 	Submitted job # 32
+2014-12-04 12:18:39,937 [DEBUG] 	Submitted job # 33
+2014-12-04 12:18:39,937 [DEBUG] 	Submitted job # 34
+2014-12-04 12:18:39,937 [DEBUG] 	Submitted job # 35
+2014-12-04 12:18:39,937 [DEBUG] 	Submitted job # 36
+2014-12-04 12:18:39,937 [DEBUG] 	Submitted job # 37
+2014-12-04 12:18:39,937 [DEBUG] 	Submitted job # 38
+2014-12-04 12:18:39,937 [DEBUG] 	Submitted job # 39
+2014-12-04 12:18:39,938 [DEBUG] 	Submitted job # 40
+2014-12-04 12:18:39,938 [DEBUG] 	Submitted job # 41
+2014-12-04 12:18:39,938 [DEBUG] 	Submitted job # 42
+2014-12-04 12:18:39,938 [DEBUG] 	Submitted job # 43
+2014-12-04 12:18:39,938 [DEBUG] 	Submitted job # 44
+2014-12-04 12:18:39,938 [DEBUG] 	Submitted job # 45
+2014-12-04 12:18:39,938 [DEBUG] 	Submitted job # 46
+2014-12-04 12:18:39,938 [DEBUG] 	Submitted job # 47
+2014-12-04 12:18:39,938 [DEBUG] 	Submitted job # 48
+2014-12-04 12:18:39,939 [DEBUG] 	Submitted job # 49
+2014-12-04 12:18:39,939 [DEBUG] 	Submitted job # 50
+2014-12-04 12:18:39,939 [DEBUG] 	Submitted job # 51
+2014-12-04 12:18:39,939 [DEBUG] 	Submitted job # 52
+2014-12-04 12:18:39,939 [DEBUG] 	Submitted job # 53
+2014-12-04 12:18:39,939 [DEBUG] 	Submitted job # 54
+2014-12-04 12:18:39,939 [DEBUG] 	Submitted job # 55
+2014-12-04 12:18:39,939 [DEBUG] 	Submitted job # 56
+2014-12-04 12:18:39,939 [DEBUG] 	Submitted job # 57
+2014-12-04 12:18:39,940 [DEBUG] 	Submitted job # 58
+2014-12-04 12:18:39,940 [DEBUG] 	Submitted job # 59
+2014-12-04 12:18:39,940 [DEBUG] 	Submitted job # 60
+2014-12-04 12:18:39,940 [DEBUG] 	Submitted job # 61
+2014-12-04 12:18:39,940 [DEBUG] 	Submitted job # 62
+2014-12-04 12:18:39,940 [DEBUG] 	Submitted job # 63
+2014-12-04 12:18:39,940 [DEBUG] 	Submitted job # 64
+2014-12-04 12:18:39,940 [DEBUG] 	Submitted job # 65
+2014-12-04 12:18:39,941 [DEBUG] 	Submitted job # 66
+2014-12-04 12:18:39,941 [DEBUG] 	Submitted job # 67
+2014-12-04 12:18:39,941 [DEBUG] 	Submitted job # 68
+2014-12-04 12:18:39,941 [DEBUG] 	Submitted job # 69
+2014-12-04 12:18:39,941 [DEBUG] 	Submitted job # 70
+2014-12-04 12:18:39,941 [DEBUG] 	Submitted job # 71
+2014-12-04 12:18:39,941 [DEBUG] 	Submitted job # 72
+2014-12-04 12:18:39,941 [DEBUG] 	Submitted job # 73
+2014-12-04 12:18:39,941 [DEBUG] 	Submitted job # 74
+2014-12-04 12:18:39,942 [DEBUG] 	Submitted job # 75
+2014-12-04 12:18:39,942 [DEBUG] 	Submitted job # 76
+2014-12-04 12:18:39,942 [DEBUG] 	Submitted job # 77
+2014-12-04 12:18:39,942 [DEBUG] 	Submitted job # 78
+2014-12-04 12:18:39,942 [DEBUG] 	Submitted job # 79
+2014-12-04 12:18:39,942 [DEBUG] 	Submitted job # 80
+2014-12-04 12:18:39,942 [DEBUG] 	Submitted job # 81
+2014-12-04 12:18:39,942 [DEBUG] 	Submitted job # 82
+2014-12-04 12:18:39,942 [DEBUG] 	Submitted job # 83
+2014-12-04 12:18:39,943 [DEBUG] 	Submitted job # 84
+2014-12-04 12:18:39,943 [DEBUG] 	Submitted job # 85
+2014-12-04 12:18:39,943 [DEBUG] 	Submitted job # 86
+2014-12-04 12:18:39,943 [DEBUG] 	Submitted job # 87
+2014-12-04 12:18:39,943 [DEBUG] 	Submitted job # 88
+2014-12-04 12:18:39,943 [DEBUG] 	Submitted job # 89
+2014-12-04 12:18:39,943 [DEBUG] 	Submitted job # 90
+2014-12-04 12:18:39,943 [DEBUG] 	Submitted job # 91
+2014-12-04 12:18:39,943 [DEBUG] 	Submitted job # 92
+2014-12-04 12:18:39,944 [DEBUG] 	Submitted job # 93
+2014-12-04 12:18:39,944 [DEBUG] 	Submitted job # 94
+2014-12-04 12:18:39,944 [DEBUG] 	Submitted job # 95
+2014-12-04 12:18:39,944 [DEBUG] 	Submitted job # 96
+2014-12-04 12:18:39,944 [DEBUG] 	Submitted job # 97
+2014-12-04 12:18:39,944 [DEBUG] 	Submitted job # 98
+2014-12-04 12:18:39,944 [DEBUG] 	Submitted job # 99
+2014-12-04 12:18:39,944 [DEBUG] 	Submitted job # 100
+2014-12-04 12:18:39,944 [DEBUG] 	Submitted job # 101
+2014-12-04 12:18:39,945 [DEBUG] 	Submitted job # 102
+2014-12-04 12:18:39,945 [DEBUG] 	Submitted job # 103
+2014-12-04 12:18:39,945 [DEBUG] 	Submitted job # 104
+2014-12-04 12:18:39,945 [DEBUG] 	Submitted job # 105
+2014-12-04 12:18:39,945 [DEBUG] 	Submitted job # 106
+2014-12-04 12:18:39,945 [DEBUG] 	Submitted job # 107
+2014-12-04 12:18:39,945 [DEBUG] 	Submitted job # 108
+2014-12-04 12:18:39,945 [DEBUG] 	Submitted job # 109
+2014-12-04 12:18:39,945 [DEBUG] 	Submitted job # 110
+2014-12-04 12:18:39,946 [DEBUG] 	Submitted job # 111
+2014-12-04 12:18:39,946 [DEBUG] 	Submitted job # 112
+2014-12-04 12:18:39,946 [DEBUG] 	Submitted job # 113
+2014-12-04 12:18:39,946 [DEBUG] 	Submitted job # 114
+2014-12-04 12:18:39,946 [DEBUG] 	Submitted job # 115
+2014-12-04 12:18:39,946 [DEBUG] 	Submitted job # 116
+2014-12-04 12:18:39,946 [DEBUG] 	Submitted job # 117
+2014-12-04 12:18:39,946 [DEBUG] 	Submitted job # 118
+2014-12-04 12:18:39,946 [DEBUG] 	Submitted job # 119
+2014-12-04 12:18:39,947 [DEBUG] 	Submitted job # 120
+2014-12-04 12:18:39,947 [DEBUG] 	Submitted job # 121
+2014-12-04 12:18:39,947 [DEBUG] 	Submitted job # 122
+2014-12-04 12:18:39,947 [DEBUG] 	Submitted job # 123
+2014-12-04 12:18:39,947 [DEBUG] 	Submitted job # 124
+2014-12-04 12:18:39,947 [DEBUG] 	Submitted job # 125
+2014-12-04 12:18:39,947 [DEBUG] 	Submitted job # 126
+2014-12-04 12:18:39,947 [DEBUG] 	Submitted job # 127
+2014-12-04 12:18:39,947 [DEBUG] 	Submitted job # 128
+2014-12-04 12:18:39,948 [DEBUG] 	Submitted job # 129
+2014-12-04 12:18:39,948 [DEBUG] 	Submitted job # 130
+2014-12-04 12:18:39,948 [DEBUG] 	Submitted job # 131
+2014-12-04 12:18:39,948 [DEBUG] 	Submitted job # 132
+2014-12-04 12:18:39,948 [DEBUG] 	Submitted job # 133
+2014-12-04 12:18:39,948 [DEBUG] 	Submitted job # 134
+2014-12-04 12:18:39,948 [DEBUG] 	Submitted job # 135
+2014-12-04 12:18:39,948 [DEBUG] 	Submitted job # 136
+2014-12-04 12:18:39,948 [DEBUG] 	Submitted job # 137
+2014-12-04 12:18:39,949 [DEBUG] 	Submitted job # 138
+2014-12-04 12:18:39,949 [DEBUG] 	Submitted job # 139
+2014-12-04 12:18:39,949 [DEBUG] 	Submitted job # 140
+2014-12-04 12:18:39,949 [DEBUG] 	Submitted job # 141
+2014-12-04 12:18:39,949 [DEBUG] 	Submitted job # 142
+2014-12-04 12:18:39,949 [DEBUG] 	Submitted job # 143
+2014-12-04 12:18:39,949 [DEBUG] 	Submitted job # 144
+2014-12-04 12:18:39,949 [DEBUG] 	Submitted job # 145
+2014-12-04 12:18:39,949 [DEBUG] 	Submitted job # 146
+2014-12-04 12:18:39,950 [DEBUG] 	Submitted job # 147
+2014-12-04 12:18:39,950 [DEBUG] 	Submitted job # 148
+2014-12-04 12:18:39,950 [DEBUG] 	Submitted job # 149
+2014-12-04 12:18:39,950 [DEBUG] 	Submitted job # 150
+2014-12-04 12:18:39,950 [DEBUG] 	Submitted job # 151
+2014-12-04 12:18:39,950 [DEBUG] 	Submitted job # 152
+2014-12-04 12:18:39,950 [DEBUG] 	Submitted job # 153
+2014-12-04 12:18:39,950 [DEBUG] 	Submitted job # 154
+2014-12-04 12:18:39,950 [DEBUG] 	Submitted job # 155
+2014-12-04 12:18:39,951 [DEBUG] 	Submitted job # 156
+2014-12-04 12:18:39,951 [DEBUG] 	Submitted job # 157
+2014-12-04 12:18:39,951 [DEBUG] 	Submitted job # 158
+2014-12-04 12:18:39,951 [DEBUG] 	Submitted job # 159
+2014-12-04 12:18:39,951 [DEBUG] 	Submitted job # 160
+2014-12-04 12:18:39,951 [DEBUG] 	Submitted job # 161
+2014-12-04 12:18:39,951 [DEBUG] 	Submitted job # 162
+2014-12-04 12:18:39,951 [DEBUG] 	Submitted job # 163
+2014-12-04 12:18:39,952 [DEBUG] 	Submitted job # 164
+2014-12-04 12:18:39,952 [DEBUG] 	Submitted job # 165
+2014-12-04 12:18:39,952 [DEBUG] 	Submitted job # 166
+2014-12-04 12:18:39,952 [DEBUG] 	Submitted job # 167
+2014-12-04 12:18:39,952 [DEBUG] 	Submitted job # 168
+2014-12-04 12:18:39,952 [DEBUG] 	Submitted job # 169
+2014-12-04 12:18:39,952 [DEBUG] 	Submitted job # 170
+2014-12-04 12:18:39,952 [DEBUG] 	Submitted job # 171
+2014-12-04 12:18:39,952 [DEBUG] 	Submitted job # 172
+2014-12-04 12:18:39,953 [DEBUG] 	Submitted job # 173
+2014-12-04 12:18:39,953 [DEBUG] 	Submitted job # 174
+2014-12-04 12:18:39,953 [DEBUG] 	Submitted job # 175
+2014-12-04 12:18:39,953 [DEBUG] 	Submitted job # 176
+2014-12-04 12:18:39,953 [DEBUG] 	Submitted job # 177
+2014-12-04 12:18:39,953 [DEBUG] 	Submitted job # 178
+2014-12-04 12:18:39,953 [DEBUG] 	Submitted job # 179
+2014-12-04 12:18:39,953 [DEBUG] 	Submitted job # 180
+2014-12-04 12:18:39,953 [DEBUG] 	Submitted job # 181
+2014-12-04 12:18:39,954 [DEBUG] 	Submitted job # 182
+2014-12-04 12:18:39,954 [DEBUG] 	Submitted job # 183
+2014-12-04 12:18:39,954 [DEBUG] 	Submitted job # 184
+2014-12-04 12:18:39,954 [DEBUG] 	Submitted job # 185
+2014-12-04 12:18:39,954 [DEBUG] 	Submitted job # 186
+2014-12-04 12:18:39,954 [DEBUG] 	Submitted job # 187
+2014-12-04 12:18:39,954 [DEBUG] 	Submitted job # 188
+2014-12-04 12:18:39,954 [DEBUG] 	Submitted job # 189
+2014-12-04 12:18:39,954 [DEBUG] 	Submitted job # 190
+2014-12-04 12:18:39,955 [DEBUG] 	Submitted job # 191
+2014-12-04 12:18:39,955 [DEBUG] 	Submitted job # 192
+2014-12-04 12:18:39,955 [DEBUG] 	Submitted job # 193
+2014-12-04 12:18:39,955 [DEBUG] 	Submitted job # 194
+2014-12-04 12:18:39,955 [DEBUG] 	Submitted job # 195
+2014-12-04 12:18:39,955 [DEBUG] 	Submitted job # 196
+2014-12-04 12:18:39,955 [DEBUG] 	Submitted job # 197
+2014-12-04 12:18:39,955 [DEBUG] 	Submitted job # 198
+2014-12-04 12:18:39,955 [DEBUG] 	Submitted job # 199
+2014-12-04 12:18:39,956 [DEBUG] 	Submitted job # 200
+2014-12-04 12:18:39,956 [DEBUG] 	Submitted job # 201
+2014-12-04 12:18:40,168 [DEBUG] 	Updating [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201]] state SubSuccess
+2014-12-04 12:18:40,786 [DEBUG] 	GRIDNAME: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=yxin/CN=728251/CN=Yongjie Xin 
+2014-12-04 12:18:41,450 [DEBUG] 	Submission Time: 12.4406228065
+2014-12-04 12:18:41,451 [INFO] 	Total of 201 jobs submitted.
+2014-12-04 12:19:31,733 [DEBUG] 	/cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c ServiceWork/
+
+2014-12-04 12:19:31,734 [INFO] 	Version 2.11.1_patch1 running on Thu Dec  4 12:19:31 2014 CST (18:19:31 UTC)
+
+crab. Working options:
+	scheduler           remoteGlidein
+	job type            CMSSW
+	server              OFF
+	working directory   /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork/
+
+2014-12-04 12:19:31,734 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/allowed_releases.conf].
+2014-12-04 12:19:31,894 [DEBUG] 	Input whitelist: 
+2014-12-04 12:19:31,894 [DEBUG] 	Input blacklist: 
+2014-12-04 12:19:31,895 [DEBUG] 	Converted whitelist: 
+2014-12-04 12:19:31,895 [DEBUG] 	Converted blacklist: 
+2014-12-04 12:19:33,698 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:19:33,699 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2014-12-04 12:19:35,656 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:19:35,657 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2 
+2014-12-04 12:19:35,657 [INFO] 	PSN black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+2014-12-04 12:19:35,664 [DEBUG] 	Status::run() called
+2014-12-04 12:19:35,664 [INFO] 	Checking the status of all jobs: please wait
+2014-12-04 12:19:35,923 [INFO] 	contacting remote host submit-4.t2.ucsd.edu
+2014-12-04 12:19:36,338 [DEBUG] 	Execute command :
+gsiscp -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no /tmp/x509up_u45880 submit-4.t2.ucsd.edu:yxin_ServiceWork_k7w93h
+2014-12-04 12:19:36,730 [DEBUG] 	Status,output= 0,
+2014-12-04 12:19:36,731 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-4.t2.ucsd.edu  "condor_history -userlog yxin_ServiceWork_k7w93h/condor.log -xml"
+2014-12-04 12:19:38,086 [INFO] 	
+ID    END STATUS            ACTION       ExeExitCode JobExitCode E_HOST
+----- --- ----------------- ------------  ---------- ----------- ---------
+1     N   Submitted         SubSuccess                           
+2     N   Submitted         SubSuccess                           
+3     N   Submitted         SubSuccess                           
+4     N   Submitted         SubSuccess                           
+5     N   Submitted         SubSuccess                           
+6     N   Submitted         SubSuccess                           
+7     N   Submitted         SubSuccess                           
+8     N   Submitted         SubSuccess                           
+9     N   Submitted         SubSuccess                           
+10    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+11    N   Submitted         SubSuccess                           
+12    N   Submitted         SubSuccess                           
+13    N   Submitted         SubSuccess                           
+14    N   Submitted         SubSuccess                           
+15    N   Submitted         SubSuccess                           
+16    N   Submitted         SubSuccess                           
+17    N   Submitted         SubSuccess                           
+18    N   Submitted         SubSuccess                           
+19    N   Submitted         SubSuccess                           
+20    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+21    N   Submitted         SubSuccess                           
+22    N   Submitted         SubSuccess                           
+23    N   Submitted         SubSuccess                           
+24    N   Submitted         SubSuccess                           
+25    N   Submitted         SubSuccess                           
+26    N   Submitted         SubSuccess                           
+27    N   Submitted         SubSuccess                           
+28    N   Submitted         SubSuccess                           
+29    N   Submitted         SubSuccess                           
+30    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+31    N   Submitted         SubSuccess                           
+32    N   Submitted         SubSuccess                           
+33    N   Submitted         SubSuccess                           
+34    N   Submitted         SubSuccess                           
+35    N   Submitted         SubSuccess                           
+36    N   Submitted         SubSuccess                           
+37    N   Submitted         SubSuccess                           
+38    N   Submitted         SubSuccess                           
+39    N   Submitted         SubSuccess                           
+40    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+41    N   Submitted         SubSuccess                           
+42    N   Submitted         SubSuccess                           
+43    N   Submitted         SubSuccess                           
+44    N   Submitted         SubSuccess                           
+45    N   Submitted         SubSuccess                           
+46    N   Submitted         SubSuccess                           
+47    N   Submitted         SubSuccess                           
+48    N   Submitted         SubSuccess                           
+49    N   Submitted         SubSuccess                           
+50    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+51    N   Submitted         SubSuccess                           
+52    N   Submitted         SubSuccess                           
+53    N   Submitted         SubSuccess                           
+54    N   Submitted         SubSuccess                           
+55    N   Submitted         SubSuccess                           
+56    N   Submitted         SubSuccess                           
+57    N   Submitted         SubSuccess                           
+58    N   Submitted         SubSuccess                           
+59    N   Submitted         SubSuccess                           
+60    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+61    N   Submitted         SubSuccess                           
+62    N   Submitted         SubSuccess                           
+63    N   Submitted         SubSuccess                           
+64    N   Submitted         SubSuccess                           
+65    N   Submitted         SubSuccess                           
+66    N   Submitted         SubSuccess                           
+67    N   Submitted         SubSuccess                           
+68    N   Submitted         SubSuccess                           
+69    N   Submitted         SubSuccess                           
+70    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+71    N   Submitted         SubSuccess                           
+72    N   Submitted         SubSuccess                           
+73    N   Submitted         SubSuccess                           
+74    N   Submitted         SubSuccess                           
+75    N   Submitted         SubSuccess                           
+76    N   Submitted         SubSuccess                           
+77    N   Submitted         SubSuccess                           
+78    N   Submitted         SubSuccess                           
+79    N   Submitted         SubSuccess                           
+80    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+81    N   Submitted         SubSuccess                           
+82    N   Submitted         SubSuccess                           
+83    N   Submitted         SubSuccess                           
+84    N   Submitted         SubSuccess                           
+85    N   Submitted         SubSuccess                           
+86    N   Submitted         SubSuccess                           
+87    N   Submitted         SubSuccess                           
+88    N   Submitted         SubSuccess                           
+89    N   Submitted         SubSuccess                           
+90    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+91    N   Submitted         SubSuccess                           
+92    N   Submitted         SubSuccess                           
+93    N   Submitted         SubSuccess                           
+94    N   Submitted         SubSuccess                           
+95    N   Submitted         SubSuccess                           
+96    N   Submitted         SubSuccess                           
+97    N   Submitted         SubSuccess                           
+98    N   Submitted         SubSuccess                           
+99    N   Submitted         SubSuccess                           
+100   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+101   N   Submitted         SubSuccess                           
+102   N   Submitted         SubSuccess                           
+103   N   Submitted         SubSuccess                           
+104   N   Submitted         SubSuccess                           
+105   N   Submitted         SubSuccess                           
+106   N   Submitted         SubSuccess                           
+107   N   Submitted         SubSuccess                           
+108   N   Submitted         SubSuccess                           
+109   N   Submitted         SubSuccess                           
+110   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+111   N   Submitted         SubSuccess                           
+112   N   Submitted         SubSuccess                           
+113   N   Submitted         SubSuccess                           
+114   N   Submitted         SubSuccess                           
+115   N   Submitted         SubSuccess                           
+116   N   Submitted         SubSuccess                           
+117   N   Submitted         SubSuccess                           
+118   N   Submitted         SubSuccess                           
+119   N   Submitted         SubSuccess                           
+120   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+121   N   Submitted         SubSuccess                           
+122   N   Submitted         SubSuccess                           
+123   N   Submitted         SubSuccess                           
+124   N   Submitted         SubSuccess                           
+125   N   Submitted         SubSuccess                           
+126   N   Submitted         SubSuccess                           
+127   N   Submitted         SubSuccess                           
+128   N   Submitted         SubSuccess                           
+129   N   Submitted         SubSuccess                           
+130   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+131   N   Submitted         SubSuccess                           
+132   N   Submitted         SubSuccess                           
+133   N   Submitted         SubSuccess                           
+134   N   Submitted         SubSuccess                           
+135   N   Submitted         SubSuccess                           
+136   N   Submitted         SubSuccess                           
+137   N   Submitted         SubSuccess                           
+138   N   Submitted         SubSuccess                           
+139   N   Submitted         SubSuccess                           
+140   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+141   N   Submitted         SubSuccess                           
+142   N   Submitted         SubSuccess                           
+143   N   Submitted         SubSuccess                           
+144   N   Submitted         SubSuccess                           
+145   N   Submitted         SubSuccess                           
+146   N   Submitted         SubSuccess                           
+147   N   Submitted         SubSuccess                           
+148   N   Submitted         SubSuccess                           
+149   N   Submitted         SubSuccess                           
+150   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+151   N   Submitted         SubSuccess                           
+152   N   Submitted         SubSuccess                           
+153   N   Submitted         SubSuccess                           
+154   N   Submitted         SubSuccess                           
+155   N   Submitted         SubSuccess                           
+156   N   Submitted         SubSuccess                           
+157   N   Submitted         SubSuccess                           
+158   N   Submitted         SubSuccess                           
+159   N   Submitted         SubSuccess                           
+160   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+161   N   Submitted         SubSuccess                           
+162   N   Submitted         SubSuccess                           
+163   N   Submitted         SubSuccess                           
+164   N   Submitted         SubSuccess                           
+165   N   Submitted         SubSuccess                           
+166   N   Submitted         SubSuccess                           
+167   N   Submitted         SubSuccess                           
+168   N   Submitted         SubSuccess                           
+169   N   Submitted         SubSuccess                           
+170   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+171   N   Submitted         SubSuccess                           
+172   N   Submitted         SubSuccess                           
+173   N   Submitted         SubSuccess                           
+174   N   Submitted         SubSuccess                           
+175   N   Submitted         SubSuccess                           
+176   N   Submitted         SubSuccess                           
+177   N   Submitted         SubSuccess                           
+178   N   Submitted         SubSuccess                           
+179   N   Submitted         SubSuccess                           
+180   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+181   N   Submitted         SubSuccess                           
+182   N   Submitted         SubSuccess                           
+183   N   Submitted         SubSuccess                           
+184   N   Submitted         SubSuccess                           
+185   N   Submitted         SubSuccess                           
+186   N   Submitted         SubSuccess                           
+187   N   Submitted         SubSuccess                           
+188   N   Submitted         SubSuccess                           
+189   N   Submitted         SubSuccess                           
+190   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+191   N   Submitted         SubSuccess                           
+192   N   Submitted         SubSuccess                           
+193   N   Submitted         SubSuccess                           
+194   N   Submitted         SubSuccess                           
+195   N   Submitted         SubSuccess                           
+196   N   Submitted         SubSuccess                           
+197   N   Submitted         SubSuccess                           
+198   N   Submitted         SubSuccess                           
+199   N   Submitted         SubSuccess                           
+200   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+201   N   Submitted         SubSuccess                           
+
+2014-12-04 12:19:38,428 [INFO] 	 201 Total Jobs 
+ >>>>>>>>> 201 Jobs Submitted 
+	List of jobs Submitted: 1-201 
+
+2014-12-04 12:19:38,524 [INFO] 	You can also follow the status of this task on :
+	CMS Dashboard: http://dashb-cms-job-task.cern.ch/taskmon.html#task=yxin_ServiceWork_k7w93h
+	Your task name is: yxin_ServiceWork_k7w93h 
+
+2014-12-04 12:19:38,525 [DEBUG] 	Status Time: 2.86025691032
+2014-12-04 12:26:35,998 [DEBUG] 	/cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c ServiceWork/
+
+2014-12-04 12:26:35,998 [INFO] 	Version 2.11.1_patch1 running on Thu Dec  4 12:26:35 2014 CST (18:26:35 UTC)
+
+crab. Working options:
+	scheduler           remoteGlidein
+	job type            CMSSW
+	server              OFF
+	working directory   /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork/
+
+2014-12-04 12:26:35,998 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/allowed_releases.conf].
+2014-12-04 12:26:36,388 [DEBUG] 	Input whitelist: 
+2014-12-04 12:26:36,389 [DEBUG] 	Input blacklist: 
+2014-12-04 12:26:36,389 [DEBUG] 	Converted whitelist: 
+2014-12-04 12:26:36,389 [DEBUG] 	Converted blacklist: 
+2014-12-04 12:26:39,717 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:26:39,719 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2014-12-04 12:26:43,611 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:26:43,612 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2 
+2014-12-04 12:26:43,612 [INFO] 	PSN black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+2014-12-04 12:26:43,620 [DEBUG] 	Status::run() called
+2014-12-04 12:26:43,620 [INFO] 	Checking the status of all jobs: please wait
+2014-12-04 12:26:43,988 [INFO] 	contacting remote host submit-4.t2.ucsd.edu
+2014-12-04 12:26:45,147 [DEBUG] 	Execute command :
+gsiscp -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no /tmp/x509up_u45880 submit-4.t2.ucsd.edu:yxin_ServiceWork_k7w93h
+2014-12-04 12:26:45,727 [DEBUG] 	Status,output= 0,
+2014-12-04 12:26:45,727 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-4.t2.ucsd.edu  "condor_history -userlog yxin_ServiceWork_k7w93h/condor.log -xml"
+2014-12-04 12:26:47,593 [INFO] 	
+ID    END STATUS            ACTION       ExeExitCode JobExitCode E_HOST
+----- --- ----------------- ------------  ---------- ----------- ---------
+1     N   Running           SubSuccess                           ce302.cern.ch
+2     N   Running           SubSuccess                           ce301.cern.ch
+3     N   Running           SubSuccess                           ce408.cern.ch
+4     N   Submitted         SubSuccess                           
+5     N   Submitted         SubSuccess                           
+6     N   Submitted         SubSuccess                           
+7     N   Submitted         SubSuccess                           
+8     N   Submitted         SubSuccess                           
+9     N   Submitted         SubSuccess                           
+10    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+11    N   Submitted         SubSuccess                           
+12    N   Submitted         SubSuccess                           
+13    N   Submitted         SubSuccess                           
+14    N   Submitted         SubSuccess                           
+15    N   Submitted         SubSuccess                           
+16    N   Submitted         SubSuccess                           
+17    N   Submitted         SubSuccess                           
+18    N   Submitted         SubSuccess                           
+19    N   Submitted         SubSuccess                           
+20    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+21    N   Submitted         SubSuccess                           
+22    N   Submitted         SubSuccess                           
+23    N   Submitted         SubSuccess                           
+24    N   Submitted         SubSuccess                           
+25    N   Submitted         SubSuccess                           
+26    N   Submitted         SubSuccess                           
+27    N   Submitted         SubSuccess                           
+28    N   Submitted         SubSuccess                           
+29    N   Submitted         SubSuccess                           
+30    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+31    N   Submitted         SubSuccess                           
+32    N   Submitted         SubSuccess                           
+33    N   Submitted         SubSuccess                           
+34    N   Submitted         SubSuccess                           
+35    N   Submitted         SubSuccess                           
+36    N   Submitted         SubSuccess                           
+37    N   Submitted         SubSuccess                           
+38    N   Submitted         SubSuccess                           
+39    N   Submitted         SubSuccess                           
+40    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+41    N   Submitted         SubSuccess                           
+42    N   Submitted         SubSuccess                           
+43    N   Submitted         SubSuccess                           
+44    N   Submitted         SubSuccess                           
+45    N   Submitted         SubSuccess                           
+46    N   Submitted         SubSuccess                           
+47    N   Submitted         SubSuccess                           
+48    N   Submitted         SubSuccess                           
+49    N   Submitted         SubSuccess                           
+50    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+51    N   Submitted         SubSuccess                           
+52    N   Submitted         SubSuccess                           
+53    N   Submitted         SubSuccess                           
+54    N   Submitted         SubSuccess                           
+55    N   Submitted         SubSuccess                           
+56    N   Submitted         SubSuccess                           
+57    N   Submitted         SubSuccess                           
+58    N   Submitted         SubSuccess                           
+59    N   Submitted         SubSuccess                           
+60    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+61    N   Submitted         SubSuccess                           
+62    N   Submitted         SubSuccess                           
+63    N   Submitted         SubSuccess                           
+64    N   Submitted         SubSuccess                           
+65    N   Submitted         SubSuccess                           
+66    N   Submitted         SubSuccess                           
+67    N   Submitted         SubSuccess                           
+68    N   Submitted         SubSuccess                           
+69    N   Submitted         SubSuccess                           
+70    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+71    N   Submitted         SubSuccess                           
+72    N   Submitted         SubSuccess                           
+73    N   Submitted         SubSuccess                           
+74    N   Submitted         SubSuccess                           
+75    N   Submitted         SubSuccess                           
+76    N   Submitted         SubSuccess                           
+77    N   Submitted         SubSuccess                           
+78    N   Submitted         SubSuccess                           
+79    N   Submitted         SubSuccess                           
+80    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+81    N   Submitted         SubSuccess                           
+82    N   Submitted         SubSuccess                           
+83    N   Submitted         SubSuccess                           
+84    N   Submitted         SubSuccess                           
+85    N   Submitted         SubSuccess                           
+86    N   Submitted         SubSuccess                           
+87    N   Submitted         SubSuccess                           
+88    N   Submitted         SubSuccess                           
+89    N   Submitted         SubSuccess                           
+90    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+91    N   Submitted         SubSuccess                           
+92    N   Submitted         SubSuccess                           
+93    N   Submitted         SubSuccess                           
+94    N   Submitted         SubSuccess                           
+95    N   Submitted         SubSuccess                           
+96    N   Submitted         SubSuccess                           
+97    N   Submitted         SubSuccess                           
+98    N   Submitted         SubSuccess                           
+99    N   Submitted         SubSuccess                           
+100   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+101   N   Submitted         SubSuccess                           
+102   N   Submitted         SubSuccess                           
+103   N   Submitted         SubSuccess                           
+104   N   Submitted         SubSuccess                           
+105   N   Submitted         SubSuccess                           
+106   N   Submitted         SubSuccess                           
+107   N   Submitted         SubSuccess                           
+108   N   Submitted         SubSuccess                           
+109   N   Submitted         SubSuccess                           
+110   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+111   N   Submitted         SubSuccess                           
+112   N   Submitted         SubSuccess                           
+113   N   Submitted         SubSuccess                           
+114   N   Submitted         SubSuccess                           
+115   N   Submitted         SubSuccess                           
+116   N   Submitted         SubSuccess                           
+117   N   Submitted         SubSuccess                           
+118   N   Submitted         SubSuccess                           
+119   N   Submitted         SubSuccess                           
+120   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+121   N   Submitted         SubSuccess                           
+122   N   Submitted         SubSuccess                           
+123   N   Submitted         SubSuccess                           
+124   N   Submitted         SubSuccess                           
+125   N   Submitted         SubSuccess                           
+126   N   Submitted         SubSuccess                           
+127   N   Submitted         SubSuccess                           
+128   N   Submitted         SubSuccess                           
+129   N   Submitted         SubSuccess                           
+130   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+131   N   Submitted         SubSuccess                           
+132   N   Submitted         SubSuccess                           
+133   N   Submitted         SubSuccess                           
+134   N   Submitted         SubSuccess                           
+135   N   Submitted         SubSuccess                           
+136   N   Submitted         SubSuccess                           
+137   N   Submitted         SubSuccess                           
+138   N   Submitted         SubSuccess                           
+139   N   Submitted         SubSuccess                           
+140   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+141   N   Submitted         SubSuccess                           
+142   N   Submitted         SubSuccess                           
+143   N   Submitted         SubSuccess                           
+144   N   Submitted         SubSuccess                           
+145   N   Submitted         SubSuccess                           
+146   N   Submitted         SubSuccess                           
+147   N   Submitted         SubSuccess                           
+148   N   Submitted         SubSuccess                           
+149   N   Submitted         SubSuccess                           
+150   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+151   N   Submitted         SubSuccess                           
+152   N   Submitted         SubSuccess                           
+153   N   Submitted         SubSuccess                           
+154   N   Submitted         SubSuccess                           
+155   N   Submitted         SubSuccess                           
+156   N   Submitted         SubSuccess                           
+157   N   Submitted         SubSuccess                           
+158   N   Submitted         SubSuccess                           
+159   N   Submitted         SubSuccess                           
+160   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+161   N   Submitted         SubSuccess                           
+162   N   Submitted         SubSuccess                           
+163   N   Submitted         SubSuccess                           
+164   N   Submitted         SubSuccess                           
+165   N   Submitted         SubSuccess                           
+166   N   Submitted         SubSuccess                           
+167   N   Submitted         SubSuccess                           
+168   N   Submitted         SubSuccess                           
+169   N   Submitted         SubSuccess                           
+170   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+171   N   Submitted         SubSuccess                           
+172   N   Submitted         SubSuccess                           
+173   N   Submitted         SubSuccess                           
+174   N   Submitted         SubSuccess                           
+175   N   Submitted         SubSuccess                           
+176   N   Submitted         SubSuccess                           
+177   N   Submitted         SubSuccess                           
+178   N   Submitted         SubSuccess                           
+179   N   Submitted         SubSuccess                           
+180   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+181   N   Submitted         SubSuccess                           
+182   N   Submitted         SubSuccess                           
+183   N   Submitted         SubSuccess                           
+184   N   Submitted         SubSuccess                           
+185   N   Submitted         SubSuccess                           
+186   N   Submitted         SubSuccess                           
+187   N   Submitted         SubSuccess                           
+188   N   Submitted         SubSuccess                           
+189   N   Submitted         SubSuccess                           
+190   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+191   N   Submitted         SubSuccess                           
+192   N   Submitted         SubSuccess                           
+193   N   Submitted         SubSuccess                           
+194   N   Submitted         SubSuccess                           
+195   N   Submitted         SubSuccess                           
+196   N   Submitted         SubSuccess                           
+197   N   Submitted         SubSuccess                           
+198   N   Submitted         SubSuccess                           
+199   N   Submitted         SubSuccess                           
+200   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+201   N   Submitted         SubSuccess                           
+
+2014-12-04 12:26:47,933 [INFO] 	 201 Total Jobs 
+ >>>>>>>>> 198 Jobs Submitted 
+	List of jobs Submitted: 4-201 
+ >>>>>>>>> 3 Jobs Running 
+	List of jobs Running: 1-3 
+
+2014-12-04 12:26:48,029 [INFO] 	You can also follow the status of this task on :
+	CMS Dashboard: http://dashb-cms-job-task.cern.ch/taskmon.html#task=yxin_ServiceWork_k7w93h
+	Your task name is: yxin_ServiceWork_k7w93h 
+
+2014-12-04 12:26:48,030 [DEBUG] 	Status Time: 4.40906906128
+2014-12-04 12:27:00,870 [DEBUG] 	/cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c ServiceWork/
+
+2014-12-04 12:27:00,870 [INFO] 	Version 2.11.1_patch1 running on Thu Dec  4 12:27:00 2014 CST (18:27:00 UTC)
+
+crab. Working options:
+	scheduler           remoteGlidein
+	job type            CMSSW
+	server              OFF
+	working directory   /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork/
+
+2014-12-04 12:27:00,870 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/allowed_releases.conf].
+2014-12-04 12:27:01,312 [DEBUG] 	Input whitelist: 
+2014-12-04 12:27:01,312 [DEBUG] 	Input blacklist: 
+2014-12-04 12:27:01,312 [DEBUG] 	Converted whitelist: 
+2014-12-04 12:27:01,313 [DEBUG] 	Converted blacklist: 
+2014-12-04 12:27:04,464 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:27:04,465 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2014-12-04 12:27:08,406 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:27:08,408 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2 
+2014-12-04 12:27:08,408 [INFO] 	PSN black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+2014-12-04 12:27:08,414 [DEBUG] 	Status::run() called
+2014-12-04 12:27:08,415 [INFO] 	Checking the status of all jobs: please wait
+2014-12-04 12:27:08,772 [INFO] 	contacting remote host submit-4.t2.ucsd.edu
+2014-12-04 12:27:09,191 [DEBUG] 	Execute command :
+gsiscp -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no /tmp/x509up_u45880 submit-4.t2.ucsd.edu:yxin_ServiceWork_k7w93h
+2014-12-04 12:27:09,602 [DEBUG] 	Status,output= 0,
+2014-12-04 12:27:09,603 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-4.t2.ucsd.edu  "condor_history -userlog yxin_ServiceWork_k7w93h/condor.log -xml"
+2014-12-04 12:27:10,958 [INFO] 	
+ID    END STATUS            ACTION       ExeExitCode JobExitCode E_HOST
+----- --- ----------------- ------------  ---------- ----------- ---------
+1     N   Running           SubSuccess                           ce302.cern.ch
+2     N   Running           SubSuccess                           ce301.cern.ch
+3     N   Running           SubSuccess                           ce408.cern.ch
+4     N   Submitted         SubSuccess                           
+5     N   Submitted         SubSuccess                           
+6     N   Submitted         SubSuccess                           
+7     N   Submitted         SubSuccess                           
+8     N   Submitted         SubSuccess                           
+9     N   Submitted         SubSuccess                           
+10    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+11    N   Submitted         SubSuccess                           
+12    N   Submitted         SubSuccess                           
+13    N   Submitted         SubSuccess                           
+14    N   Submitted         SubSuccess                           
+15    N   Submitted         SubSuccess                           
+16    N   Submitted         SubSuccess                           
+17    N   Submitted         SubSuccess                           
+18    N   Submitted         SubSuccess                           
+19    N   Submitted         SubSuccess                           
+20    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+21    N   Submitted         SubSuccess                           
+22    N   Submitted         SubSuccess                           
+23    N   Submitted         SubSuccess                           
+24    N   Submitted         SubSuccess                           
+25    N   Submitted         SubSuccess                           
+26    N   Submitted         SubSuccess                           
+27    N   Submitted         SubSuccess                           
+28    N   Submitted         SubSuccess                           
+29    N   Submitted         SubSuccess                           
+30    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+31    N   Submitted         SubSuccess                           
+32    N   Submitted         SubSuccess                           
+33    N   Submitted         SubSuccess                           
+34    N   Submitted         SubSuccess                           
+35    N   Submitted         SubSuccess                           
+36    N   Submitted         SubSuccess                           
+37    N   Submitted         SubSuccess                           
+38    N   Submitted         SubSuccess                           
+39    N   Submitted         SubSuccess                           
+40    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+41    N   Submitted         SubSuccess                           
+42    N   Submitted         SubSuccess                           
+43    N   Submitted         SubSuccess                           
+44    N   Submitted         SubSuccess                           
+45    N   Submitted         SubSuccess                           
+46    N   Submitted         SubSuccess                           
+47    N   Submitted         SubSuccess                           
+48    N   Submitted         SubSuccess                           
+49    N   Submitted         SubSuccess                           
+50    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+51    N   Submitted         SubSuccess                           
+52    N   Submitted         SubSuccess                           
+53    N   Submitted         SubSuccess                           
+54    N   Submitted         SubSuccess                           
+55    N   Submitted         SubSuccess                           
+56    N   Submitted         SubSuccess                           
+57    N   Submitted         SubSuccess                           
+58    N   Submitted         SubSuccess                           
+59    N   Submitted         SubSuccess                           
+60    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+61    N   Submitted         SubSuccess                           
+62    N   Submitted         SubSuccess                           
+63    N   Submitted         SubSuccess                           
+64    N   Submitted         SubSuccess                           
+65    N   Submitted         SubSuccess                           
+66    N   Submitted         SubSuccess                           
+67    N   Submitted         SubSuccess                           
+68    N   Submitted         SubSuccess                           
+69    N   Submitted         SubSuccess                           
+70    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+71    N   Submitted         SubSuccess                           
+72    N   Submitted         SubSuccess                           
+73    N   Submitted         SubSuccess                           
+74    N   Submitted         SubSuccess                           
+75    N   Submitted         SubSuccess                           
+76    N   Submitted         SubSuccess                           
+77    N   Submitted         SubSuccess                           
+78    N   Submitted         SubSuccess                           
+79    N   Submitted         SubSuccess                           
+80    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+81    N   Submitted         SubSuccess                           
+82    N   Submitted         SubSuccess                           
+83    N   Submitted         SubSuccess                           
+84    N   Submitted         SubSuccess                           
+85    N   Submitted         SubSuccess                           
+86    N   Submitted         SubSuccess                           
+87    N   Submitted         SubSuccess                           
+88    N   Submitted         SubSuccess                           
+89    N   Submitted         SubSuccess                           
+90    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+91    N   Submitted         SubSuccess                           
+92    N   Submitted         SubSuccess                           
+93    N   Submitted         SubSuccess                           
+94    N   Submitted         SubSuccess                           
+95    N   Submitted         SubSuccess                           
+96    N   Submitted         SubSuccess                           
+97    N   Submitted         SubSuccess                           
+98    N   Submitted         SubSuccess                           
+99    N   Submitted         SubSuccess                           
+100   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+101   N   Submitted         SubSuccess                           
+102   N   Submitted         SubSuccess                           
+103   N   Submitted         SubSuccess                           
+104   N   Submitted         SubSuccess                           
+105   N   Submitted         SubSuccess                           
+106   N   Submitted         SubSuccess                           
+107   N   Submitted         SubSuccess                           
+108   N   Submitted         SubSuccess                           
+109   N   Submitted         SubSuccess                           
+110   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+111   N   Submitted         SubSuccess                           
+112   N   Submitted         SubSuccess                           
+113   N   Submitted         SubSuccess                           
+114   N   Submitted         SubSuccess                           
+115   N   Submitted         SubSuccess                           
+116   N   Submitted         SubSuccess                           
+117   N   Submitted         SubSuccess                           
+118   N   Submitted         SubSuccess                           
+119   N   Submitted         SubSuccess                           
+120   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+121   N   Submitted         SubSuccess                           
+122   N   Submitted         SubSuccess                           
+123   N   Submitted         SubSuccess                           
+124   N   Submitted         SubSuccess                           
+125   N   Submitted         SubSuccess                           
+126   N   Submitted         SubSuccess                           
+127   N   Submitted         SubSuccess                           
+128   N   Submitted         SubSuccess                           
+129   N   Submitted         SubSuccess                           
+130   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+131   N   Submitted         SubSuccess                           
+132   N   Submitted         SubSuccess                           
+133   N   Submitted         SubSuccess                           
+134   N   Submitted         SubSuccess                           
+135   N   Submitted         SubSuccess                           
+136   N   Submitted         SubSuccess                           
+137   N   Submitted         SubSuccess                           
+138   N   Submitted         SubSuccess                           
+139   N   Submitted         SubSuccess                           
+140   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+141   N   Submitted         SubSuccess                           
+142   N   Submitted         SubSuccess                           
+143   N   Submitted         SubSuccess                           
+144   N   Submitted         SubSuccess                           
+145   N   Submitted         SubSuccess                           
+146   N   Submitted         SubSuccess                           
+147   N   Submitted         SubSuccess                           
+148   N   Submitted         SubSuccess                           
+149   N   Submitted         SubSuccess                           
+150   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+151   N   Submitted         SubSuccess                           
+152   N   Submitted         SubSuccess                           
+153   N   Submitted         SubSuccess                           
+154   N   Submitted         SubSuccess                           
+155   N   Submitted         SubSuccess                           
+156   N   Submitted         SubSuccess                           
+157   N   Submitted         SubSuccess                           
+158   N   Submitted         SubSuccess                           
+159   N   Submitted         SubSuccess                           
+160   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+161   N   Submitted         SubSuccess                           
+162   N   Submitted         SubSuccess                           
+163   N   Submitted         SubSuccess                           
+164   N   Submitted         SubSuccess                           
+165   N   Submitted         SubSuccess                           
+166   N   Submitted         SubSuccess                           
+167   N   Submitted         SubSuccess                           
+168   N   Submitted         SubSuccess                           
+169   N   Submitted         SubSuccess                           
+170   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+171   N   Submitted         SubSuccess                           
+172   N   Submitted         SubSuccess                           
+173   N   Submitted         SubSuccess                           
+174   N   Submitted         SubSuccess                           
+175   N   Submitted         SubSuccess                           
+176   N   Submitted         SubSuccess                           
+177   N   Submitted         SubSuccess                           
+178   N   Submitted         SubSuccess                           
+179   N   Submitted         SubSuccess                           
+180   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+181   N   Submitted         SubSuccess                           
+182   N   Submitted         SubSuccess                           
+183   N   Submitted         SubSuccess                           
+184   N   Submitted         SubSuccess                           
+185   N   Submitted         SubSuccess                           
+186   N   Submitted         SubSuccess                           
+187   N   Submitted         SubSuccess                           
+188   N   Submitted         SubSuccess                           
+189   N   Submitted         SubSuccess                           
+190   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+191   N   Submitted         SubSuccess                           
+192   N   Submitted         SubSuccess                           
+193   N   Submitted         SubSuccess                           
+194   N   Submitted         SubSuccess                           
+195   N   Submitted         SubSuccess                           
+196   N   Submitted         SubSuccess                           
+197   N   Submitted         SubSuccess                           
+198   N   Submitted         SubSuccess                           
+199   N   Submitted         SubSuccess                           
+200   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+201   N   Submitted         SubSuccess                           
+
+2014-12-04 12:27:11,299 [INFO] 	 201 Total Jobs 
+ >>>>>>>>> 198 Jobs Submitted 
+	List of jobs Submitted: 4-201 
+ >>>>>>>>> 3 Jobs Running 
+	List of jobs Running: 1-3 
+
+2014-12-04 12:27:11,395 [INFO] 	You can also follow the status of this task on :
+	CMS Dashboard: http://dashb-cms-job-task.cern.ch/taskmon.html#task=yxin_ServiceWork_k7w93h
+	Your task name is: yxin_ServiceWork_k7w93h 
+
+2014-12-04 12:27:11,396 [DEBUG] 	Status Time: 2.98110699654
+2014-12-04 12:31:31,679 [DEBUG] 	/cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c ServiceWork/
+
+2014-12-04 12:31:31,679 [INFO] 	Version 2.11.1_patch1 running on Thu Dec  4 12:31:31 2014 CST (18:31:31 UTC)
+
+crab. Working options:
+	scheduler           remoteGlidein
+	job type            CMSSW
+	server              OFF
+	working directory   /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork/
+
+2014-12-04 12:31:31,679 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/allowed_releases.conf].
+2014-12-04 12:31:31,912 [DEBUG] 	Input whitelist: 
+2014-12-04 12:31:31,912 [DEBUG] 	Input blacklist: 
+2014-12-04 12:31:31,912 [DEBUG] 	Converted whitelist: 
+2014-12-04 12:31:31,912 [DEBUG] 	Converted blacklist: 
+2014-12-04 12:31:33,751 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:31:33,753 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2014-12-04 12:31:35,504 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:31:35,506 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2 
+2014-12-04 12:31:35,506 [INFO] 	PSN black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+2014-12-04 12:31:35,512 [DEBUG] 	Status::run() called
+2014-12-04 12:31:35,512 [INFO] 	Checking the status of all jobs: please wait
+2014-12-04 12:31:35,769 [INFO] 	contacting remote host submit-4.t2.ucsd.edu
+2014-12-04 12:31:36,183 [DEBUG] 	Execute command :
+gsiscp -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no /tmp/x509up_u45880 submit-4.t2.ucsd.edu:yxin_ServiceWork_k7w93h
+2014-12-04 12:31:36,578 [DEBUG] 	Status,output= 0,
+2014-12-04 12:31:36,578 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-4.t2.ucsd.edu  "condor_history -userlog yxin_ServiceWork_k7w93h/condor.log -xml"
+2014-12-04 12:31:37,910 [INFO] 	
+ID    END STATUS            ACTION       ExeExitCode JobExitCode E_HOST
+----- --- ----------------- ------------  ---------- ----------- ---------
+1     N   Running           SubSuccess                           ce302.cern.ch
+2     N   Running           SubSuccess                           ce301.cern.ch
+3     N   Running           SubSuccess                           ce408.cern.ch
+4     N   Running           SubSuccess                           ce404.cern.ch
+5     N   Submitted         SubSuccess                           
+6     N   Submitted         SubSuccess                           
+7     N   Submitted         SubSuccess                           
+8     N   Submitted         SubSuccess                           
+9     N   Submitted         SubSuccess                           
+10    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+11    N   Submitted         SubSuccess                           
+12    N   Submitted         SubSuccess                           
+13    N   Submitted         SubSuccess                           
+14    N   Submitted         SubSuccess                           
+15    N   Submitted         SubSuccess                           
+16    N   Submitted         SubSuccess                           
+17    N   Submitted         SubSuccess                           
+18    N   Submitted         SubSuccess                           
+19    N   Submitted         SubSuccess                           
+20    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+21    N   Submitted         SubSuccess                           
+22    N   Submitted         SubSuccess                           
+23    N   Submitted         SubSuccess                           
+24    N   Submitted         SubSuccess                           
+25    N   Submitted         SubSuccess                           
+26    N   Submitted         SubSuccess                           
+27    N   Submitted         SubSuccess                           
+28    N   Submitted         SubSuccess                           
+29    N   Submitted         SubSuccess                           
+30    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+31    N   Submitted         SubSuccess                           
+32    N   Submitted         SubSuccess                           
+33    N   Submitted         SubSuccess                           
+34    N   Submitted         SubSuccess                           
+35    N   Submitted         SubSuccess                           
+36    N   Submitted         SubSuccess                           
+37    N   Submitted         SubSuccess                           
+38    N   Submitted         SubSuccess                           
+39    N   Submitted         SubSuccess                           
+40    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+41    N   Submitted         SubSuccess                           
+42    N   Submitted         SubSuccess                           
+43    N   Submitted         SubSuccess                           
+44    N   Submitted         SubSuccess                           
+45    N   Submitted         SubSuccess                           
+46    N   Submitted         SubSuccess                           
+47    N   Submitted         SubSuccess                           
+48    N   Submitted         SubSuccess                           
+49    N   Submitted         SubSuccess                           
+50    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+51    N   Submitted         SubSuccess                           
+52    N   Submitted         SubSuccess                           
+53    N   Submitted         SubSuccess                           
+54    N   Submitted         SubSuccess                           
+55    N   Submitted         SubSuccess                           
+56    N   Submitted         SubSuccess                           
+57    N   Submitted         SubSuccess                           
+58    N   Submitted         SubSuccess                           
+59    N   Submitted         SubSuccess                           
+60    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+61    N   Submitted         SubSuccess                           
+62    N   Submitted         SubSuccess                           
+63    N   Submitted         SubSuccess                           
+64    N   Submitted         SubSuccess                           
+65    N   Submitted         SubSuccess                           
+66    N   Submitted         SubSuccess                           
+67    N   Submitted         SubSuccess                           
+68    N   Submitted         SubSuccess                           
+69    N   Submitted         SubSuccess                           
+70    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+71    N   Submitted         SubSuccess                           
+72    N   Submitted         SubSuccess                           
+73    N   Submitted         SubSuccess                           
+74    N   Submitted         SubSuccess                           
+75    N   Submitted         SubSuccess                           
+76    N   Submitted         SubSuccess                           
+77    N   Submitted         SubSuccess                           
+78    N   Submitted         SubSuccess                           
+79    N   Submitted         SubSuccess                           
+80    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+81    N   Submitted         SubSuccess                           
+82    N   Submitted         SubSuccess                           
+83    N   Submitted         SubSuccess                           
+84    N   Submitted         SubSuccess                           
+85    N   Submitted         SubSuccess                           
+86    N   Submitted         SubSuccess                           
+87    N   Submitted         SubSuccess                           
+88    N   Submitted         SubSuccess                           
+89    N   Submitted         SubSuccess                           
+90    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+91    N   Submitted         SubSuccess                           
+92    N   Submitted         SubSuccess                           
+93    N   Submitted         SubSuccess                           
+94    N   Submitted         SubSuccess                           
+95    N   Submitted         SubSuccess                           
+96    N   Submitted         SubSuccess                           
+97    N   Submitted         SubSuccess                           
+98    N   Submitted         SubSuccess                           
+99    N   Submitted         SubSuccess                           
+100   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+101   N   Submitted         SubSuccess                           
+102   N   Submitted         SubSuccess                           
+103   N   Submitted         SubSuccess                           
+104   N   Submitted         SubSuccess                           
+105   N   Submitted         SubSuccess                           
+106   N   Submitted         SubSuccess                           
+107   N   Submitted         SubSuccess                           
+108   N   Submitted         SubSuccess                           
+109   N   Submitted         SubSuccess                           
+110   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+111   N   Submitted         SubSuccess                           
+112   N   Submitted         SubSuccess                           
+113   N   Submitted         SubSuccess                           
+114   N   Submitted         SubSuccess                           
+115   N   Submitted         SubSuccess                           
+116   N   Submitted         SubSuccess                           
+117   N   Submitted         SubSuccess                           
+118   N   Submitted         SubSuccess                           
+119   N   Submitted         SubSuccess                           
+120   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+121   N   Submitted         SubSuccess                           
+122   N   Submitted         SubSuccess                           
+123   N   Submitted         SubSuccess                           
+124   N   Submitted         SubSuccess                           
+125   N   Submitted         SubSuccess                           
+126   N   Submitted         SubSuccess                           
+127   N   Submitted         SubSuccess                           
+128   N   Submitted         SubSuccess                           
+129   N   Submitted         SubSuccess                           
+130   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+131   N   Submitted         SubSuccess                           
+132   N   Submitted         SubSuccess                           
+133   N   Submitted         SubSuccess                           
+134   N   Submitted         SubSuccess                           
+135   N   Submitted         SubSuccess                           
+136   N   Submitted         SubSuccess                           
+137   N   Submitted         SubSuccess                           
+138   N   Submitted         SubSuccess                           
+139   N   Submitted         SubSuccess                           
+140   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+141   N   Submitted         SubSuccess                           
+142   N   Submitted         SubSuccess                           
+143   N   Submitted         SubSuccess                           
+144   N   Submitted         SubSuccess                           
+145   N   Submitted         SubSuccess                           
+146   N   Submitted         SubSuccess                           
+147   N   Submitted         SubSuccess                           
+148   N   Submitted         SubSuccess                           
+149   N   Submitted         SubSuccess                           
+150   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+151   N   Submitted         SubSuccess                           
+152   N   Submitted         SubSuccess                           
+153   N   Submitted         SubSuccess                           
+154   N   Submitted         SubSuccess                           
+155   N   Submitted         SubSuccess                           
+156   N   Submitted         SubSuccess                           
+157   N   Submitted         SubSuccess                           
+158   N   Submitted         SubSuccess                           
+159   N   Submitted         SubSuccess                           
+160   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+161   N   Submitted         SubSuccess                           
+162   N   Submitted         SubSuccess                           
+163   N   Submitted         SubSuccess                           
+164   N   Submitted         SubSuccess                           
+165   N   Submitted         SubSuccess                           
+166   N   Submitted         SubSuccess                           
+167   N   Submitted         SubSuccess                           
+168   N   Submitted         SubSuccess                           
+169   N   Submitted         SubSuccess                           
+170   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+171   N   Submitted         SubSuccess                           
+172   N   Submitted         SubSuccess                           
+173   N   Submitted         SubSuccess                           
+174   N   Submitted         SubSuccess                           
+175   N   Submitted         SubSuccess                           
+176   N   Submitted         SubSuccess                           
+177   N   Submitted         SubSuccess                           
+178   N   Submitted         SubSuccess                           
+179   N   Submitted         SubSuccess                           
+180   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+181   N   Submitted         SubSuccess                           
+182   N   Submitted         SubSuccess                           
+183   N   Submitted         SubSuccess                           
+184   N   Submitted         SubSuccess                           
+185   N   Submitted         SubSuccess                           
+186   N   Submitted         SubSuccess                           
+187   N   Submitted         SubSuccess                           
+188   N   Submitted         SubSuccess                           
+189   N   Submitted         SubSuccess                           
+190   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+191   N   Submitted         SubSuccess                           
+192   N   Submitted         SubSuccess                           
+193   N   Submitted         SubSuccess                           
+194   N   Submitted         SubSuccess                           
+195   N   Submitted         SubSuccess                           
+196   N   Submitted         SubSuccess                           
+197   N   Submitted         SubSuccess                           
+198   N   Submitted         SubSuccess                           
+199   N   Submitted         SubSuccess                           
+200   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+201   N   Submitted         SubSuccess                           
+
+2014-12-04 12:31:38,258 [INFO] 	 201 Total Jobs 
+ >>>>>>>>> 197 Jobs Submitted 
+	List of jobs Submitted: 5-201 
+ >>>>>>>>> 4 Jobs Running 
+	List of jobs Running: 1-4 
+
+2014-12-04 12:31:38,358 [INFO] 	You can also follow the status of this task on :
+	CMS Dashboard: http://dashb-cms-job-task.cern.ch/taskmon.html#task=yxin_ServiceWork_k7w93h
+	Your task name is: yxin_ServiceWork_k7w93h 
+
+2014-12-04 12:31:38,358 [DEBUG] 	Status Time: 2.84558010101
+2014-12-04 12:34:37,356 [DEBUG] 	/cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c ServiceWork/
+
+2014-12-04 12:34:37,356 [INFO] 	Version 2.11.1_patch1 running on Thu Dec  4 12:34:37 2014 CST (18:34:37 UTC)
+
+crab. Working options:
+	scheduler           remoteGlidein
+	job type            CMSSW
+	server              OFF
+	working directory   /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork/
+
+2014-12-04 12:34:37,356 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/allowed_releases.conf].
+2014-12-04 12:34:37,510 [DEBUG] 	Input whitelist: 
+2014-12-04 12:34:37,510 [DEBUG] 	Input blacklist: 
+2014-12-04 12:34:37,510 [DEBUG] 	Converted whitelist: 
+2014-12-04 12:34:37,510 [DEBUG] 	Converted blacklist: 
+2014-12-04 12:34:39,407 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:34:39,409 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2014-12-04 12:34:41,331 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 12:34:41,333 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2 
+2014-12-04 12:34:41,333 [INFO] 	PSN black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+2014-12-04 12:34:41,339 [DEBUG] 	Status::run() called
+2014-12-04 12:34:41,339 [INFO] 	Checking the status of all jobs: please wait
+2014-12-04 12:34:41,592 [INFO] 	contacting remote host submit-4.t2.ucsd.edu
+2014-12-04 12:34:42,006 [DEBUG] 	Execute command :
+gsiscp -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no /tmp/x509up_u45880 submit-4.t2.ucsd.edu:yxin_ServiceWork_k7w93h
+2014-12-04 12:34:42,402 [DEBUG] 	Status,output= 0,
+2014-12-04 12:34:42,402 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-4.t2.ucsd.edu  "condor_history -userlog yxin_ServiceWork_k7w93h/condor.log -xml"
+2014-12-04 12:34:43,749 [INFO] 	
+ID    END STATUS            ACTION       ExeExitCode JobExitCode E_HOST
+----- --- ----------------- ------------  ---------- ----------- ---------
+1     N   Running           SubSuccess                           ce302.cern.ch
+2     N   Running           SubSuccess                           ce301.cern.ch
+3     N   Running           SubSuccess                           ce408.cern.ch
+4     N   Running           SubSuccess                           ce404.cern.ch
+5     N   Running           SubSuccess                           ce406.cern.ch
+6     N   Running           SubSuccess                           ce403.cern.ch
+7     N   Submitted         SubSuccess                           
+8     N   Submitted         SubSuccess                           
+9     N   Submitted         SubSuccess                           
+10    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+11    N   Submitted         SubSuccess                           
+12    N   Submitted         SubSuccess                           
+13    N   Submitted         SubSuccess                           
+14    N   Submitted         SubSuccess                           
+15    N   Submitted         SubSuccess                           
+16    N   Submitted         SubSuccess                           
+17    N   Submitted         SubSuccess                           
+18    N   Submitted         SubSuccess                           
+19    N   Submitted         SubSuccess                           
+20    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+21    N   Submitted         SubSuccess                           
+22    N   Submitted         SubSuccess                           
+23    N   Submitted         SubSuccess                           
+24    N   Submitted         SubSuccess                           
+25    N   Submitted         SubSuccess                           
+26    N   Submitted         SubSuccess                           
+27    N   Submitted         SubSuccess                           
+28    N   Submitted         SubSuccess                           
+29    N   Submitted         SubSuccess                           
+30    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+31    N   Submitted         SubSuccess                           
+32    N   Submitted         SubSuccess                           
+33    N   Submitted         SubSuccess                           
+34    N   Submitted         SubSuccess                           
+35    N   Submitted         SubSuccess                           
+36    N   Submitted         SubSuccess                           
+37    N   Submitted         SubSuccess                           
+38    N   Submitted         SubSuccess                           
+39    N   Submitted         SubSuccess                           
+40    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+41    N   Submitted         SubSuccess                           
+42    N   Submitted         SubSuccess                           
+43    N   Submitted         SubSuccess                           
+44    N   Submitted         SubSuccess                           
+45    N   Submitted         SubSuccess                           
+46    N   Submitted         SubSuccess                           
+47    N   Submitted         SubSuccess                           
+48    N   Submitted         SubSuccess                           
+49    N   Submitted         SubSuccess                           
+50    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+51    N   Submitted         SubSuccess                           
+52    N   Submitted         SubSuccess                           
+53    N   Submitted         SubSuccess                           
+54    N   Submitted         SubSuccess                           
+55    N   Submitted         SubSuccess                           
+56    N   Submitted         SubSuccess                           
+57    N   Submitted         SubSuccess                           
+58    N   Submitted         SubSuccess                           
+59    N   Submitted         SubSuccess                           
+60    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+61    N   Submitted         SubSuccess                           
+62    N   Submitted         SubSuccess                           
+63    N   Submitted         SubSuccess                           
+64    N   Submitted         SubSuccess                           
+65    N   Submitted         SubSuccess                           
+66    N   Submitted         SubSuccess                           
+67    N   Submitted         SubSuccess                           
+68    N   Submitted         SubSuccess                           
+69    N   Submitted         SubSuccess                           
+70    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+71    N   Submitted         SubSuccess                           
+72    N   Submitted         SubSuccess                           
+73    N   Submitted         SubSuccess                           
+74    N   Submitted         SubSuccess                           
+75    N   Submitted         SubSuccess                           
+76    N   Submitted         SubSuccess                           
+77    N   Submitted         SubSuccess                           
+78    N   Submitted         SubSuccess                           
+79    N   Submitted         SubSuccess                           
+80    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+81    N   Submitted         SubSuccess                           
+82    N   Submitted         SubSuccess                           
+83    N   Submitted         SubSuccess                           
+84    N   Submitted         SubSuccess                           
+85    N   Submitted         SubSuccess                           
+86    N   Submitted         SubSuccess                           
+87    N   Submitted         SubSuccess                           
+88    N   Submitted         SubSuccess                           
+89    N   Submitted         SubSuccess                           
+90    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+91    N   Submitted         SubSuccess                           
+92    N   Submitted         SubSuccess                           
+93    N   Submitted         SubSuccess                           
+94    N   Submitted         SubSuccess                           
+95    N   Submitted         SubSuccess                           
+96    N   Submitted         SubSuccess                           
+97    N   Submitted         SubSuccess                           
+98    N   Submitted         SubSuccess                           
+99    N   Submitted         SubSuccess                           
+100   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+101   N   Submitted         SubSuccess                           
+102   N   Submitted         SubSuccess                           
+103   N   Submitted         SubSuccess                           
+104   N   Submitted         SubSuccess                           
+105   N   Submitted         SubSuccess                           
+106   N   Submitted         SubSuccess                           
+107   N   Submitted         SubSuccess                           
+108   N   Submitted         SubSuccess                           
+109   N   Submitted         SubSuccess                           
+110   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+111   N   Submitted         SubSuccess                           
+112   N   Submitted         SubSuccess                           
+113   N   Submitted         SubSuccess                           
+114   N   Submitted         SubSuccess                           
+115   N   Submitted         SubSuccess                           
+116   N   Submitted         SubSuccess                           
+117   N   Submitted         SubSuccess                           
+118   N   Submitted         SubSuccess                           
+119   N   Submitted         SubSuccess                           
+120   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+121   N   Submitted         SubSuccess                           
+122   N   Submitted         SubSuccess                           
+123   N   Submitted         SubSuccess                           
+124   N   Submitted         SubSuccess                           
+125   N   Submitted         SubSuccess                           
+126   N   Submitted         SubSuccess                           
+127   N   Submitted         SubSuccess                           
+128   N   Submitted         SubSuccess                           
+129   N   Submitted         SubSuccess                           
+130   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+131   N   Submitted         SubSuccess                           
+132   N   Submitted         SubSuccess                           
+133   N   Submitted         SubSuccess                           
+134   N   Submitted         SubSuccess                           
+135   N   Submitted         SubSuccess                           
+136   N   Submitted         SubSuccess                           
+137   N   Submitted         SubSuccess                           
+138   N   Submitted         SubSuccess                           
+139   N   Submitted         SubSuccess                           
+140   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+141   N   Submitted         SubSuccess                           
+142   N   Submitted         SubSuccess                           
+143   N   Submitted         SubSuccess                           
+144   N   Submitted         SubSuccess                           
+145   N   Submitted         SubSuccess                           
+146   N   Submitted         SubSuccess                           
+147   N   Submitted         SubSuccess                           
+148   N   Submitted         SubSuccess                           
+149   N   Submitted         SubSuccess                           
+150   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+151   N   Submitted         SubSuccess                           
+152   N   Submitted         SubSuccess                           
+153   N   Submitted         SubSuccess                           
+154   N   Submitted         SubSuccess                           
+155   N   Submitted         SubSuccess                           
+156   N   Submitted         SubSuccess                           
+157   N   Submitted         SubSuccess                           
+158   N   Submitted         SubSuccess                           
+159   N   Submitted         SubSuccess                           
+160   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+161   N   Submitted         SubSuccess                           
+162   N   Submitted         SubSuccess                           
+163   N   Submitted         SubSuccess                           
+164   N   Submitted         SubSuccess                           
+165   N   Submitted         SubSuccess                           
+166   N   Submitted         SubSuccess                           
+167   N   Submitted         SubSuccess                           
+168   N   Submitted         SubSuccess                           
+169   N   Submitted         SubSuccess                           
+170   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+171   N   Submitted         SubSuccess                           
+172   N   Submitted         SubSuccess                           
+173   N   Submitted         SubSuccess                           
+174   N   Submitted         SubSuccess                           
+175   N   Submitted         SubSuccess                           
+176   N   Submitted         SubSuccess                           
+177   N   Submitted         SubSuccess                           
+178   N   Submitted         SubSuccess                           
+179   N   Submitted         SubSuccess                           
+180   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+181   N   Submitted         SubSuccess                           
+182   N   Submitted         SubSuccess                           
+183   N   Submitted         SubSuccess                           
+184   N   Submitted         SubSuccess                           
+185   N   Submitted         SubSuccess                           
+186   N   Submitted         SubSuccess                           
+187   N   Submitted         SubSuccess                           
+188   N   Submitted         SubSuccess                           
+189   N   Submitted         SubSuccess                           
+190   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+191   N   Submitted         SubSuccess                           
+192   N   Submitted         SubSuccess                           
+193   N   Submitted         SubSuccess                           
+194   N   Submitted         SubSuccess                           
+195   N   Submitted         SubSuccess                           
+196   N   Submitted         SubSuccess                           
+197   N   Submitted         SubSuccess                           
+198   N   Submitted         SubSuccess                           
+199   N   Submitted         SubSuccess                           
+200   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+201   N   Submitted         SubSuccess                           
+
+2014-12-04 12:34:44,091 [INFO] 	 201 Total Jobs 
+ >>>>>>>>> 195 Jobs Submitted 
+	List of jobs Submitted: 7-201 
+ >>>>>>>>> 6 Jobs Running 
+	List of jobs Running: 1-6 
+
+2014-12-04 12:34:44,187 [INFO] 	You can also follow the status of this task on :
+	CMS Dashboard: http://dashb-cms-job-task.cern.ch/taskmon.html#task=yxin_ServiceWork_k7w93h
+	Your task name is: yxin_ServiceWork_k7w93h 
+
+2014-12-04 12:34:44,187 [DEBUG] 	Status Time: 2.84805321693
+2014-12-04 13:02:46,723 [DEBUG] 	/cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c ServiceWork/
+
+2014-12-04 13:02:46,723 [INFO] 	Version 2.11.1_patch1 running on Thu Dec  4 13:02:46 2014 CST (19:02:46 UTC)
+
+crab. Working options:
+	scheduler           remoteGlidein
+	job type            CMSSW
+	server              OFF
+	working directory   /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork/
+
+2014-12-04 13:02:46,724 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/allowed_releases.conf].
+2014-12-04 13:02:46,724 [DEBUG] 	/uscms/home/yongjie/.cms_crab/0_GET_allowed_releases.conf expired, refreshing cache
+2014-12-04 13:02:46,725 [DEBUG] 	getData: 
+	url: /cms/LCG/crab/config/allowed_releases.conf
+	data: {}
+2014-12-04 13:02:47,312 [DEBUG] 	Input whitelist: 
+2014-12-04 13:02:47,312 [DEBUG] 	Input blacklist: 
+2014-12-04 13:02:47,313 [DEBUG] 	Converted whitelist: 
+2014-12-04 13:02:47,313 [DEBUG] 	Converted blacklist: 
+2014-12-04 13:02:49,203 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 13:02:49,204 [DEBUG] 	/uscms/home/yongjie/.cms_crab/0_GET_site_black_list.conf expired, refreshing cache
+2014-12-04 13:02:49,204 [DEBUG] 	getData: 
+	url: /cms/LCG/crab/config/site_black_list.conf
+	data: {}
+2014-12-04 13:02:49,439 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2014-12-04 13:02:51,498 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 13:02:51,499 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2 
+2014-12-04 13:02:51,499 [INFO] 	PSN black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+2014-12-04 13:02:51,506 [DEBUG] 	Status::run() called
+2014-12-04 13:02:51,506 [INFO] 	Checking the status of all jobs: please wait
+2014-12-04 13:02:51,835 [INFO] 	contacting remote host submit-4.t2.ucsd.edu
+2014-12-04 13:02:52,257 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh  -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-4.t2.ucsd.edu  "sleep 3600"
+2014-12-04 13:02:52,260 [DEBUG] 	Execute command :
+gsiscp -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no /tmp/x509up_u45880 submit-4.t2.ucsd.edu:yxin_ServiceWork_k7w93h
+2014-12-04 13:02:52,685 [DEBUG] 	Status,output= 0,
+2014-12-04 13:02:52,686 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-4.t2.ucsd.edu  "condor_history -userlog yxin_ServiceWork_k7w93h/condor.log -xml"
+2014-12-04 13:02:53,868 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-4.t2.ucsd.edu "cd yxin_ServiceWork_k7w93h; egrep -H WrapperExitCode\|ExeExitCode crab_fjr_*xml|tr '_.\t\"' ' '|awk '{print \$3\" \"\$7\" \"\$9}'"
+2014-12-04 13:02:54,601 [DEBUG] 	Status,output= 0
+10 0 WrapperExitCode
+10 0 ExeExitCode
+11 0 WrapperExitCode
+11 0 ExeExitCode
+12 0 WrapperExitCode
+12 0 ExeExitCode
+13 0 WrapperExitCode
+13 0 ExeExitCode
+14 0 WrapperExitCode
+14 0 ExeExitCode
+15 0 WrapperExitCode
+15 0 ExeExitCode
+16 0 WrapperExitCode
+16 0 ExeExitCode
+1 60307 WrapperExitCode
+1 0 ExeExitCode
+2 0 WrapperExitCode
+2 0 ExeExitCode
+3 0 WrapperExitCode
+3 0 ExeExitCode
+4 0 WrapperExitCode
+4 0 ExeExitCode
+5 0 WrapperExitCode
+5 0 ExeExitCode
+6 0 WrapperExitCode
+6 0 ExeExitCode
+7 0 WrapperExitCode
+7 0 ExeExitCode
+8 0 WrapperExitCode
+8 0 ExeExitCode
+9 60307 WrapperExitCode
+9 0 ExeExitCode
+2014-12-04 13:02:54,795 [INFO] 	
+ID    END STATUS            ACTION       ExeExitCode JobExitCode E_HOST
+----- --- ----------------- ------------  ---------- ----------- ---------
+1     N   Done              Terminated    0          60307       ce302.cern.ch
+2     N   Done              Terminated    0          0           ce301.cern.ch
+3     N   Done              Terminated    0          0           ce408.cern.ch
+4     N   Done              Terminated    0          0           ce404.cern.ch
+5     N   Done              Terminated    0          0           ce406.cern.ch
+6     N   Done              Terminated    0          0           ce403.cern.ch
+7     N   Done              Terminated    0          0           ce301.cern.ch
+8     N   Done              Terminated    0          0           ce408.cern.ch
+9     N   Done              Terminated    0          60307       ce408.cern.ch
+10    N   Done              Terminated    0          0           ce404.cern.ch
+--------------------------------------------------------------------------------
+11    N   Done              Terminated    0          0           ce406.cern.ch
+12    N   Done              Terminated    0          0           ce403.cern.ch
+13    N   Done              Terminated    0          0           ce408.cern.ch
+14    N   Done              Terminated    0          0           ce301.cern.ch
+15    N   Done              Terminated    0          0           ce302.cern.ch
+16    N   Done              Terminated    0          0           ce404.cern.ch
+17    N   Running           SubSuccess                           ce406.cern.ch
+18    N   Running           SubSuccess                           ce404.cern.ch
+19    N   Running           SubSuccess                           ce403.cern.ch
+20    N   Running           SubSuccess                           ce301.cern.ch
+--------------------------------------------------------------------------------
+21    N   Running           SubSuccess                           ce408.cern.ch
+22    N   Running           SubSuccess                           ce302.cern.ch
+23    N   Running           SubSuccess                           ce407.cern.ch
+24    N   Running           SubSuccess                           ce302.cern.ch
+25    N   Running           SubSuccess                           ce404.cern.ch
+26    N   Running           SubSuccess                           ce408.cern.ch
+27    N   Running           SubSuccess                           ce401.cern.ch
+28    N   Running           SubSuccess                           ce301.cern.ch
+29    N   Running           SubSuccess                           ce402.cern.ch
+30    N   Running           SubSuccess                           ce404.cern.ch
+--------------------------------------------------------------------------------
+31    N   Submitted         SubSuccess                           
+32    N   Submitted         SubSuccess                           
+33    N   Submitted         SubSuccess                           
+34    N   Submitted         SubSuccess                           
+35    N   Submitted         SubSuccess                           
+36    N   Submitted         SubSuccess                           
+37    N   Submitted         SubSuccess                           
+38    N   Submitted         SubSuccess                           
+39    N   Submitted         SubSuccess                           
+40    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+41    N   Submitted         SubSuccess                           
+42    N   Submitted         SubSuccess                           
+43    N   Submitted         SubSuccess                           
+44    N   Submitted         SubSuccess                           
+45    N   Submitted         SubSuccess                           
+46    N   Submitted         SubSuccess                           
+47    N   Submitted         SubSuccess                           
+48    N   Submitted         SubSuccess                           
+49    N   Submitted         SubSuccess                           
+50    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+51    N   Submitted         SubSuccess                           
+52    N   Submitted         SubSuccess                           
+53    N   Submitted         SubSuccess                           
+54    N   Submitted         SubSuccess                           
+55    N   Submitted         SubSuccess                           
+56    N   Submitted         SubSuccess                           
+57    N   Submitted         SubSuccess                           
+58    N   Submitted         SubSuccess                           
+59    N   Submitted         SubSuccess                           
+60    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+61    N   Submitted         SubSuccess                           
+62    N   Submitted         SubSuccess                           
+63    N   Submitted         SubSuccess                           
+64    N   Submitted         SubSuccess                           
+65    N   Submitted         SubSuccess                           
+66    N   Submitted         SubSuccess                           
+67    N   Submitted         SubSuccess                           
+68    N   Submitted         SubSuccess                           
+69    N   Submitted         SubSuccess                           
+70    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+71    N   Submitted         SubSuccess                           
+72    N   Submitted         SubSuccess                           
+73    N   Submitted         SubSuccess                           
+74    N   Submitted         SubSuccess                           
+75    N   Submitted         SubSuccess                           
+76    N   Submitted         SubSuccess                           
+77    N   Submitted         SubSuccess                           
+78    N   Submitted         SubSuccess                           
+79    N   Submitted         SubSuccess                           
+80    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+81    N   Submitted         SubSuccess                           
+82    N   Submitted         SubSuccess                           
+83    N   Submitted         SubSuccess                           
+84    N   Submitted         SubSuccess                           
+85    N   Submitted         SubSuccess                           
+86    N   Submitted         SubSuccess                           
+87    N   Submitted         SubSuccess                           
+88    N   Submitted         SubSuccess                           
+89    N   Submitted         SubSuccess                           
+90    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+91    N   Submitted         SubSuccess                           
+92    N   Submitted         SubSuccess                           
+93    N   Submitted         SubSuccess                           
+94    N   Submitted         SubSuccess                           
+95    N   Submitted         SubSuccess                           
+96    N   Submitted         SubSuccess                           
+97    N   Submitted         SubSuccess                           
+98    N   Submitted         SubSuccess                           
+99    N   Submitted         SubSuccess                           
+100   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+101   N   Submitted         SubSuccess                           
+102   N   Submitted         SubSuccess                           
+103   N   Submitted         SubSuccess                           
+104   N   Submitted         SubSuccess                           
+105   N   Submitted         SubSuccess                           
+106   N   Submitted         SubSuccess                           
+107   N   Submitted         SubSuccess                           
+108   N   Submitted         SubSuccess                           
+109   N   Submitted         SubSuccess                           
+110   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+111   N   Submitted         SubSuccess                           
+112   N   Submitted         SubSuccess                           
+113   N   Submitted         SubSuccess                           
+114   N   Submitted         SubSuccess                           
+115   N   Submitted         SubSuccess                           
+116   N   Submitted         SubSuccess                           
+117   N   Submitted         SubSuccess                           
+118   N   Submitted         SubSuccess                           
+119   N   Submitted         SubSuccess                           
+120   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+121   N   Submitted         SubSuccess                           
+122   N   Submitted         SubSuccess                           
+123   N   Submitted         SubSuccess                           
+124   N   Submitted         SubSuccess                           
+125   N   Submitted         SubSuccess                           
+126   N   Submitted         SubSuccess                           
+127   N   Submitted         SubSuccess                           
+128   N   Submitted         SubSuccess                           
+129   N   Submitted         SubSuccess                           
+130   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+131   N   Submitted         SubSuccess                           
+132   N   Submitted         SubSuccess                           
+133   N   Submitted         SubSuccess                           
+134   N   Submitted         SubSuccess                           
+135   N   Submitted         SubSuccess                           
+136   N   Submitted         SubSuccess                           
+137   N   Submitted         SubSuccess                           
+138   N   Submitted         SubSuccess                           
+139   N   Submitted         SubSuccess                           
+140   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+141   N   Submitted         SubSuccess                           
+142   N   Submitted         SubSuccess                           
+143   N   Submitted         SubSuccess                           
+144   N   Submitted         SubSuccess                           
+145   N   Submitted         SubSuccess                           
+146   N   Submitted         SubSuccess                           
+147   N   Submitted         SubSuccess                           
+148   N   Submitted         SubSuccess                           
+149   N   Submitted         SubSuccess                           
+150   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+151   N   Submitted         SubSuccess                           
+152   N   Submitted         SubSuccess                           
+153   N   Submitted         SubSuccess                           
+154   N   Submitted         SubSuccess                           
+155   N   Submitted         SubSuccess                           
+156   N   Submitted         SubSuccess                           
+157   N   Submitted         SubSuccess                           
+158   N   Submitted         SubSuccess                           
+159   N   Submitted         SubSuccess                           
+160   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+161   N   Submitted         SubSuccess                           
+162   N   Submitted         SubSuccess                           
+163   N   Submitted         SubSuccess                           
+164   N   Submitted         SubSuccess                           
+165   N   Submitted         SubSuccess                           
+166   N   Submitted         SubSuccess                           
+167   N   Submitted         SubSuccess                           
+168   N   Submitted         SubSuccess                           
+169   N   Submitted         SubSuccess                           
+170   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+171   N   Submitted         SubSuccess                           
+172   N   Submitted         SubSuccess                           
+173   N   Submitted         SubSuccess                           
+174   N   Submitted         SubSuccess                           
+175   N   Submitted         SubSuccess                           
+176   N   Submitted         SubSuccess                           
+177   N   Submitted         SubSuccess                           
+178   N   Submitted         SubSuccess                           
+179   N   Submitted         SubSuccess                           
+180   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+181   N   Submitted         SubSuccess                           
+182   N   Submitted         SubSuccess                           
+183   N   Submitted         SubSuccess                           
+184   N   Submitted         SubSuccess                           
+185   N   Submitted         SubSuccess                           
+186   N   Submitted         SubSuccess                           
+187   N   Submitted         SubSuccess                           
+188   N   Submitted         SubSuccess                           
+189   N   Submitted         SubSuccess                           
+190   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+191   N   Submitted         SubSuccess                           
+192   N   Submitted         SubSuccess                           
+193   N   Submitted         SubSuccess                           
+194   N   Submitted         SubSuccess                           
+195   N   Submitted         SubSuccess                           
+196   N   Submitted         SubSuccess                           
+197   N   Submitted         SubSuccess                           
+198   N   Submitted         SubSuccess                           
+199   N   Submitted         SubSuccess                           
+200   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+201   N   Submitted         SubSuccess                           
+
+2014-12-04 13:02:54,922 [INFO] 	ExitCodes Summary
+ >>>>>>>>> 14 Jobs with Wrapper Exit Code : 0 
+	 List of jobs: 2-8,10-16 
+	See https://twiki.cern.ch/twiki/bin/view/CMSPublic/JobExitCodes for Exit Code meaning
+
+2014-12-04 13:02:55,023 [INFO] 	ExitCodes Summary
+ >>>>>>>>> 2 Jobs with Wrapper Exit Code : 60307 
+	 List of jobs: 1,9 
+	See https://twiki.cern.ch/twiki/bin/view/CMSPublic/JobExitCodes for Exit Code meaning
+
+2014-12-04 13:02:55,023 [INFO] 	 201 Total Jobs 
+ >>>>>>>>> 171 Jobs Submitted 
+	List of jobs Submitted: 31-201 
+ >>>>>>>>> 14 Jobs Running 
+	List of jobs Running: 17-30 
+ >>>>>>>>> 16 Jobs Done
+	Jobs terminated: retrieve them with: crab -getoutput <List of jobs>
+	List of jobs: 1-16 
+
+2014-12-04 13:02:55,078 [INFO] 	You can also follow the status of this task on :
+	CMS Dashboard: http://dashb-cms-job-task.cern.ch/taskmon.html#task=yxin_ServiceWork_k7w93h
+	Your task name is: yxin_ServiceWork_k7w93h 
+
+2014-12-04 13:02:55,079 [DEBUG] 	Status Time: 3.57240200043
+2014-12-04 13:03:10,261 [DEBUG] 	/cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -getoutput -c ServiceWork/
+
+2014-12-04 13:03:10,261 [INFO] 	Version 2.11.1_patch1 running on Thu Dec  4 13:03:10 2014 CST (19:03:10 UTC)
+
+crab. Working options:
+	scheduler           remoteGlidein
+	job type            CMSSW
+	server              OFF
+	working directory   /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork/
+
+2014-12-04 13:03:10,261 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/allowed_releases.conf].
+2014-12-04 13:03:10,382 [DEBUG] 	Input whitelist: 
+2014-12-04 13:03:10,383 [DEBUG] 	Input blacklist: 
+2014-12-04 13:03:10,383 [DEBUG] 	Converted whitelist: 
+2014-12-04 13:03:10,383 [DEBUG] 	Converted blacklist: 
+2014-12-04 13:03:12,107 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 13:03:12,109 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2014-12-04 13:03:14,574 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 13:03:14,575 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2 
+2014-12-04 13:03:14,575 [INFO] 	PSN black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+2014-12-04 13:03:14,581 [DEBUG] 	GetOutput::run() called
+2014-12-04 13:03:14,710 [INFO] 	Only 16 jobs will be retrieved  from 201 requested.
+	(for details: crab -status)
+2014-12-04 13:03:14,721 [DEBUG] 	fs: Invalid argument; it is possible that /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/ is not in AFS.
+Volume Name                    Quota       Used %Used   Partition
+ while checking AFS quota. Treat as check OK
+2014-12-04 13:03:14,731 [DEBUG] 	fs: Invalid argument; it is possible that /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/ is not in AFS.
+Volume Name                  kbytes      used     avail %used
+ while checking partition. Treat as check OK
+2014-12-04 13:03:14,854 [INFO] 	contacting remote host submit-4.t2.ucsd.edu
+2014-12-04 13:03:15,340 [INFO] 	Preparing to rsync 2 files
+2014-12-04 13:03:16,425 [INFO] 	Results of Jobs # 1 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:16,881 [DEBUG] 	fs: Invalid argument; it is possible that /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/ is not in AFS.
+Volume Name                    Quota       Used %Used   Partition
+ while checking AFS quota. Treat as check OK
+2014-12-04 13:03:16,892 [DEBUG] 	fs: Invalid argument; it is possible that /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/ is not in AFS.
+Volume Name                  kbytes      used     avail %used
+ while checking partition. Treat as check OK
+2014-12-04 13:03:16,950 [INFO] 	contacting remote host submit-4.t2.ucsd.edu
+2014-12-04 13:03:17,377 [INFO] 	Preparing to rsync 30 files
+2014-12-04 13:03:19,099 [INFO] 	Results of Jobs # 2 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:19,230 [INFO] 	Results of Jobs # 3 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:19,341 [INFO] 	Results of Jobs # 4 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:19,481 [INFO] 	Results of Jobs # 5 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:19,601 [INFO] 	Results of Jobs # 6 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:19,757 [INFO] 	Results of Jobs # 7 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:19,884 [INFO] 	Results of Jobs # 8 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:20,072 [INFO] 	Results of Jobs # 9 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:20,223 [INFO] 	Results of Jobs # 10 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:20,346 [INFO] 	Results of Jobs # 11 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:20,453 [INFO] 	Results of Jobs # 12 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:20,585 [INFO] 	Results of Jobs # 13 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:20,722 [INFO] 	Results of Jobs # 14 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:20,873 [INFO] 	Results of Jobs # 15 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:20,990 [INFO] 	Results of Jobs # 16 are in /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork//res/
+2014-12-04 13:03:21,098 [DEBUG] 	GetOutput Time: 6.51585102081
+2014-12-04 13:03:27,050 [DEBUG] 	/cvmfs/cms.cern.ch/crab/CRAB_2_11_1_patch1/python/crab.py -status -c ServiceWork/
+
+2014-12-04 13:03:27,051 [INFO] 	Version 2.11.1_patch1 running on Thu Dec  4 13:03:27 2014 CST (19:03:27 UTC)
+
+crab. Working options:
+	scheduler           remoteGlidein
+	job type            CMSSW
+	server              OFF
+	working directory   /uscms_data/d3/yongjie/Service/CMSSW_7_3_0_pre3/src/Work/ServiceWork/
+
+2014-12-04 13:03:27,051 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/allowed_releases.conf].
+2014-12-04 13:03:27,126 [DEBUG] 	Input whitelist: 
+2014-12-04 13:03:27,126 [DEBUG] 	Input blacklist: 
+2014-12-04 13:03:27,127 [DEBUG] 	Converted whitelist: 
+2014-12-04 13:03:27,127 [DEBUG] 	Converted blacklist: 
+2014-12-04 13:03:28,563 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 13:03:28,564 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2014-12-04 13:03:29,877 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/uscms/home/yongjie/.cms_crab/site_black_list.conf].
+2014-12-04 13:03:29,878 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2 
+2014-12-04 13:03:29,878 [INFO] 	PSN black list: TAPE,srm-cms.cern.ch,cmssrm.fnal.gov,T1_RU,T1_TW,cmseos.fnal.gov,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+2014-12-04 13:03:29,884 [DEBUG] 	Status::run() called
+2014-12-04 13:03:29,884 [INFO] 	Checking the status of all jobs: please wait
+2014-12-04 13:03:30,039 [INFO] 	contacting remote host submit-4.t2.ucsd.edu
+2014-12-04 13:03:30,311 [DEBUG] 	Execute command :
+gsiscp -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no /tmp/x509up_u45880 submit-4.t2.ucsd.edu:yxin_ServiceWork_k7w93h
+2014-12-04 13:03:30,674 [DEBUG] 	Status,output= 0,
+2014-12-04 13:03:30,674 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-4.t2.ucsd.edu  "condor_history -userlog yxin_ServiceWork_k7w93h/condor.log -xml"
+2014-12-04 13:03:31,792 [DEBUG] 	Execute command :
+eval `scram unsetenv -sh`;  gsissh -o ControlMaster=auto -o ControlPath=/tmp/yongjie/.ssh/ssh-link--896130574-submit-4.t2.ucsd.edu -o BatchMode=yes -o StrictHostKeyChecking=no -o ForwardX11=no submit-4.t2.ucsd.edu "cd yxin_ServiceWork_k7w93h; egrep -H WrapperExitCode\|ExeExitCode crab_fjr_*xml|tr '_.\t\"' ' '|awk '{print \$3\" \"\$7\" \"\$9}'"
+2014-12-04 13:03:32,087 [DEBUG] 	Status,output= 0
+10 0 WrapperExitCode
+10 0 ExeExitCode
+11 0 WrapperExitCode
+11 0 ExeExitCode
+12 0 WrapperExitCode
+12 0 ExeExitCode
+13 0 WrapperExitCode
+13 0 ExeExitCode
+14 0 WrapperExitCode
+14 0 ExeExitCode
+15 0 WrapperExitCode
+15 0 ExeExitCode
+16 0 WrapperExitCode
+16 0 ExeExitCode
+17 0 WrapperExitCode
+17 0 ExeExitCode
+1 60307 WrapperExitCode
+1 0 ExeExitCode
+2 0 WrapperExitCode
+2 0 ExeExitCode
+3 0 WrapperExitCode
+3 0 ExeExitCode
+4 0 WrapperExitCode
+4 0 ExeExitCode
+5 0 WrapperExitCode
+5 0 ExeExitCode
+6 0 WrapperExitCode
+6 0 ExeExitCode
+7 0 WrapperExitCode
+7 0 ExeExitCode
+8 0 WrapperExitCode
+8 0 ExeExitCode
+9 60307 WrapperExitCode
+9 0 ExeExitCode
+2014-12-04 13:03:32,246 [INFO] 	
+ID    END STATUS            ACTION       ExeExitCode JobExitCode E_HOST
+----- --- ----------------- ------------  ---------- ----------- ---------
+1     Y   Retrieved         Cleared       0          60307       ce302.cern.ch
+2     Y   Retrieved         Cleared       0          0           ce301.cern.ch
+3     Y   Retrieved         Cleared       0          0           ce408.cern.ch
+4     Y   Retrieved         Cleared       0          0           ce404.cern.ch
+5     Y   Retrieved         Cleared       0          0           ce406.cern.ch
+6     Y   Retrieved         Cleared       0          0           ce403.cern.ch
+7     Y   Retrieved         Cleared       0          0           ce301.cern.ch
+8     Y   Retrieved         Cleared       0          0           ce408.cern.ch
+9     Y   Retrieved         Cleared       0          60307       ce408.cern.ch
+10    Y   Retrieved         Cleared       0          0           ce404.cern.ch
+--------------------------------------------------------------------------------
+11    Y   Retrieved         Cleared       0          0           ce406.cern.ch
+12    Y   Retrieved         Cleared       0          0           ce403.cern.ch
+13    Y   Retrieved         Cleared       0          0           ce408.cern.ch
+14    Y   Retrieved         Cleared       0          0           ce301.cern.ch
+15    Y   Retrieved         Cleared       0          0           ce302.cern.ch
+16    Y   Retrieved         Cleared       0          0           ce404.cern.ch
+17    N   Done              Terminated    0          0           ce406.cern.ch
+18    N   Running           SubSuccess                           ce404.cern.ch
+19    N   Running           SubSuccess                           ce403.cern.ch
+20    N   Running           SubSuccess                           ce301.cern.ch
+--------------------------------------------------------------------------------
+21    N   Running           SubSuccess                           ce408.cern.ch
+22    N   Running           SubSuccess                           ce302.cern.ch
+23    N   Running           SubSuccess                           ce407.cern.ch
+24    N   Running           SubSuccess                           ce302.cern.ch
+25    N   Running           SubSuccess                           ce404.cern.ch
+26    N   Running           SubSuccess                           ce408.cern.ch
+27    N   Running           SubSuccess                           ce401.cern.ch
+28    N   Running           SubSuccess                           ce301.cern.ch
+29    N   Running           SubSuccess                           ce402.cern.ch
+30    N   Running           SubSuccess                           ce404.cern.ch
+--------------------------------------------------------------------------------
+31    N   Submitted         SubSuccess                           
+32    N   Submitted         SubSuccess                           
+33    N   Submitted         SubSuccess                           
+34    N   Submitted         SubSuccess                           
+35    N   Submitted         SubSuccess                           
+36    N   Submitted         SubSuccess                           
+37    N   Submitted         SubSuccess                           
+38    N   Submitted         SubSuccess                           
+39    N   Submitted         SubSuccess                           
+40    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+41    N   Submitted         SubSuccess                           
+42    N   Submitted         SubSuccess                           
+43    N   Submitted         SubSuccess                           
+44    N   Submitted         SubSuccess                           
+45    N   Submitted         SubSuccess                           
+46    N   Submitted         SubSuccess                           
+47    N   Submitted         SubSuccess                           
+48    N   Submitted         SubSuccess                           
+49    N   Submitted         SubSuccess                           
+50    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+51    N   Submitted         SubSuccess                           
+52    N   Submitted         SubSuccess                           
+53    N   Submitted         SubSuccess                           
+54    N   Submitted         SubSuccess                           
+55    N   Submitted         SubSuccess                           
+56    N   Submitted         SubSuccess                           
+57    N   Submitted         SubSuccess                           
+58    N   Submitted         SubSuccess                           
+59    N   Submitted         SubSuccess                           
+60    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+61    N   Submitted         SubSuccess                           
+62    N   Submitted         SubSuccess                           
+63    N   Submitted         SubSuccess                           
+64    N   Submitted         SubSuccess                           
+65    N   Submitted         SubSuccess                           
+66    N   Submitted         SubSuccess                           
+67    N   Submitted         SubSuccess                           
+68    N   Submitted         SubSuccess                           
+69    N   Submitted         SubSuccess                           
+70    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+71    N   Submitted         SubSuccess                           
+72    N   Submitted         SubSuccess                           
+73    N   Submitted         SubSuccess                           
+74    N   Submitted         SubSuccess                           
+75    N   Submitted         SubSuccess                           
+76    N   Submitted         SubSuccess                           
+77    N   Submitted         SubSuccess                           
+78    N   Submitted         SubSuccess                           
+79    N   Submitted         SubSuccess                           
+80    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+81    N   Submitted         SubSuccess                           
+82    N   Submitted         SubSuccess                           
+83    N   Submitted         SubSuccess                           
+84    N   Submitted         SubSuccess                           
+85    N   Submitted         SubSuccess                           
+86    N   Submitted         SubSuccess                           
+87    N   Submitted         SubSuccess                           
+88    N   Submitted         SubSuccess                           
+89    N   Submitted         SubSuccess                           
+90    N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+91    N   Submitted         SubSuccess                           
+92    N   Submitted         SubSuccess                           
+93    N   Submitted         SubSuccess                           
+94    N   Submitted         SubSuccess                           
+95    N   Submitted         SubSuccess                           
+96    N   Submitted         SubSuccess                           
+97    N   Submitted         SubSuccess                           
+98    N   Submitted         SubSuccess                           
+99    N   Submitted         SubSuccess                           
+100   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+101   N   Submitted         SubSuccess                           
+102   N   Submitted         SubSuccess                           
+103   N   Submitted         SubSuccess                           
+104   N   Submitted         SubSuccess                           
+105   N   Submitted         SubSuccess                           
+106   N   Submitted         SubSuccess                           
+107   N   Submitted         SubSuccess                           
+108   N   Submitted         SubSuccess                           
+109   N   Submitted         SubSuccess                           
+110   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+111   N   Submitted         SubSuccess                           
+112   N   Submitted         SubSuccess                           
+113   N   Submitted         SubSuccess                           
+114   N   Submitted         SubSuccess                           
+115   N   Submitted         SubSuccess                           
+116   N   Submitted         SubSuccess                           
+117   N   Submitted         SubSuccess                           
+118   N   Submitted         SubSuccess                           
+119   N   Submitted         SubSuccess                           
+120   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+121   N   Submitted         SubSuccess                           
+122   N   Submitted         SubSuccess                           
+123   N   Submitted         SubSuccess                           
+124   N   Submitted         SubSuccess                           
+125   N   Submitted         SubSuccess                           
+126   N   Submitted         SubSuccess                           
+127   N   Submitted         SubSuccess                           
+128   N   Submitted         SubSuccess                           
+129   N   Submitted         SubSuccess                           
+130   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+131   N   Submitted         SubSuccess                           
+132   N   Submitted         SubSuccess                           
+133   N   Submitted         SubSuccess                           
+134   N   Submitted         SubSuccess                           
+135   N   Submitted         SubSuccess                           
+136   N   Submitted         SubSuccess                           
+137   N   Submitted         SubSuccess                           
+138   N   Submitted         SubSuccess                           
+139   N   Submitted         SubSuccess                           
+140   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+141   N   Submitted         SubSuccess                           
+142   N   Submitted         SubSuccess                           
+143   N   Submitted         SubSuccess                           
+144   N   Submitted         SubSuccess                           
+145   N   Submitted         SubSuccess                           
+146   N   Submitted         SubSuccess                           
+147   N   Submitted         SubSuccess                           
+148   N   Submitted         SubSuccess                           
+149   N   Submitted         SubSuccess                           
+150   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+151   N   Submitted         SubSuccess                           
+152   N   Submitted         SubSuccess                           
+153   N   Submitted         SubSuccess                           
+154   N   Submitted         SubSuccess                           
+155   N   Submitted         SubSuccess                           
+156   N   Submitted         SubSuccess                           
+157   N   Submitted         SubSuccess                           
+158   N   Submitted         SubSuccess                           
+159   N   Submitted         SubSuccess                           
+160   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+161   N   Submitted         SubSuccess                           
+162   N   Submitted         SubSuccess                           
+163   N   Submitted         SubSuccess                           
+164   N   Submitted         SubSuccess                           
+165   N   Submitted         SubSuccess                           
+166   N   Submitted         SubSuccess                           
+167   N   Submitted         SubSuccess                           
+168   N   Submitted         SubSuccess                           
+169   N   Submitted         SubSuccess                           
+170   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+171   N   Submitted         SubSuccess                           
+172   N   Submitted         SubSuccess                           
+173   N   Submitted         SubSuccess                           
+174   N   Submitted         SubSuccess                           
+175   N   Submitted         SubSuccess                           
+176   N   Submitted         SubSuccess                           
+177   N   Submitted         SubSuccess                           
+178   N   Submitted         SubSuccess                           
+179   N   Submitted         SubSuccess                           
+180   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+181   N   Submitted         SubSuccess                           
+182   N   Submitted         SubSuccess                           
+183   N   Submitted         SubSuccess                           
+184   N   Submitted         SubSuccess                           
+185   N   Submitted         SubSuccess                           
+186   N   Submitted         SubSuccess                           
+187   N   Submitted         SubSuccess                           
+188   N   Submitted         SubSuccess                           
+189   N   Submitted         SubSuccess                           
+190   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+191   N   Submitted         SubSuccess                           
+192   N   Submitted         SubSuccess                           
+193   N   Submitted         SubSuccess                           
+194   N   Submitted         SubSuccess                           
+195   N   Submitted         SubSuccess                           
+196   N   Submitted         SubSuccess                           
+197   N   Submitted         SubSuccess                           
+198   N   Submitted         SubSuccess                           
+199   N   Submitted         SubSuccess                           
+200   N   Submitted         SubSuccess                           
+--------------------------------------------------------------------------------
+201   N   Submitted         SubSuccess                           
+
+2014-12-04 13:03:32,375 [INFO] 	ExitCodes Summary
+ >>>>>>>>> 15 Jobs with Wrapper Exit Code : 0 
+	 List of jobs: 2-8,10-17 
+	See https://twiki.cern.ch/twiki/bin/view/CMSPublic/JobExitCodes for Exit Code meaning
+
+2014-12-04 13:03:32,486 [INFO] 	ExitCodes Summary
+ >>>>>>>>> 2 Jobs with Wrapper Exit Code : 60307 
+	 List of jobs: 1,9 
+	See https://twiki.cern.ch/twiki/bin/view/CMSPublic/JobExitCodes for Exit Code meaning
+
+2014-12-04 13:03:32,486 [INFO] 	 201 Total Jobs 
+ >>>>>>>>> 171 Jobs Submitted 
+	List of jobs Submitted: 31-201 
+ >>>>>>>>> 13 Jobs Running 
+	List of jobs Running: 18-30 
+ >>>>>>>>> 16 Jobs Retrieved 
+	List of jobs Retrieved: 1-16 
+ >>>>>>>>> 1 Jobs Done
+	Jobs terminated: retrieve them with: crab -getoutput <List of jobs>
+	List of jobs: 17 
+
+2014-12-04 13:03:32,545 [INFO] 	You can also follow the status of this task on :
+	CMS Dashboard: http://dashb-cms-job-task.cern.ch/taskmon.html#task=yxin_ServiceWork_k7w93h
+	Your task name is: yxin_ServiceWork_k7w93h 
+
+2014-12-04 13:03:32,545 [DEBUG] 	Status Time: 2.66113185883
