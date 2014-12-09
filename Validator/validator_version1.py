@@ -44,8 +44,11 @@ print "output file name                 ", options.outputFileName
 
 #some constants, globally
 ptMin = 0
-ptMax = 3000
-ptStep = 200
+#ptMax = 3000
+ptMax = 200
+ptStep = 20
+#ptStep = 200
+
 etaMin = 0
 etaMax = 5
 etaStep = 1
@@ -183,9 +186,17 @@ for j in range( len(etaBinning) ) :
 #
 #rPFRealGenPlot0 = TH1F( FirstNames[3] +"Eta" +  MiddleNames[0] +"Pt"+LastNames[0], "", 200, 0, 2  )
 
-
-
-
+## Plot the PF energy fraction plots for AK4 without tracks jets
+chargedEmEnergyFractionPlot = TH1F( 'chargedEmEnergyFractionPlot', 'chargedEmEnergyFractionPlot', 200, 0, 2 )
+chargedHadronEnergyFractionPlot = TH1F( 'chargedHadronEnergyFractionPlot', 'chargedHadronEnergyFractionPlot', 200, 0, 2 ) 
+chargedMuEnergyFractionPlot     = TH1F( 'chargedMuEnergyFractionPlot', 'chargedMuEnergyFractionPlot', 200, 0, 2 )
+electronEnergyFractionPlot	= TH1F( 'electronEnergyFractionPlot', '', 200, 0, 2 )   
+HFEMEnergyFractionPlot		= TH1F( 'HFEMEnergyFractionPlot', '', 200, 0, 2 ) 
+HFHadronEnergyFractionPlot	= TH1F( 'HFHadronEnergyFractionPlot', '', 200, 0, 2 )
+muonEnergyFractionPlot		= TH1F( 'muonEnergyFractionPlot', '', 200, 0, 2 )
+neutralEmEnergyFractionPlot	= TH1F( 'neutralEmEnergyFractionPlot', '', 200, 0, 2 )
+neutralHadronEnergyFractionPlot	= TH1F( 'neutralHadronEnergyFractionPlot', '', 200, 0, 2 )
+photonEnergyFractionPlot	= TH1F( 'photonEnergyFractionPlot', '', 200, 0, 2 )
 
 print files
 events = Events(files)
@@ -214,7 +225,22 @@ for event in events :
     event.getByLabel (ak4PFJetsRealLabel, ak4PFJetsHandle )
     ak4PFRealJets = ak4PFJetsHandle.product()
 
+    for iJet in ak4PFNoTrackJets :
+	chargedEmEnergyFractionPlot.Fill( iJet.chargedEmEnergyFraction() ) 
+	chargedHadronEnergyFractionPlot.Fill( iJet.chargedHadronEnergyFraction() )
+	chargedMuEnergyFractionPlot.Fill( iJet.chargedMuEnergyFraction() )     
+	electronEnergyFractionPlot.Fill( iJet.electronEnergyFraction() )      
+	HFEMEnergyFractionPlot.Fill( iJet.HFEMEnergyFraction() )          
+	HFHadronEnergyFractionPlot.Fill( iJet.HFHadronEnergyFraction() )      
+	muonEnergyFractionPlot.Fill( iJet.muonEnergyFraction() )          
+	neutralEmEnergyFractionPlot.Fill( iJet.neutralEmEnergyFraction() )     
+	neutralHadronEnergyFractionPlot.Fill( iJet.neutralHadronEnergyFraction() ) 
+	photonEnergyFractionPlot.Fill( iJet.photonEnergyFraction() )        
 
+
+    ###plot the CHF and neutral hadron fraction for pF without tracks jets
+#    print dir(ak4PFNoTrackJets[0])
+#    break
     compare( ak4PFClusterJets, ak4GenJets, PFClusterPlotsList, etaBinning, binning )
     compare( ak4PFNoTrackJets, ak4GenJets, PFNoTrackPlotsList, etaBinning, binning )
     compare( ak4CaloJets,      ak4GenJets, CaloPlotsList,      etaBinning, binning )
