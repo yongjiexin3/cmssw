@@ -187,16 +187,34 @@ for j in range( len(etaBinning) ) :
 #rPFRealGenPlot0 = TH1F( FirstNames[3] +"Eta" +  MiddleNames[0] +"Pt"+LastNames[0], "", 200, 0, 2  )
 
 ## Plot the PF energy fraction plots for AK4 without tracks jets
-chargedEmEnergyFractionPlot = TH1F( 'chargedEmEnergyFractionPlot', 'chargedEmEnergyFractionPlot', 200, 0, 2 )
-chargedHadronEnergyFractionPlot = TH1F( 'chargedHadronEnergyFractionPlot', 'chargedHadronEnergyFractionPlot', 200, 0, 2 ) 
-chargedMuEnergyFractionPlot     = TH1F( 'chargedMuEnergyFractionPlot', 'chargedMuEnergyFractionPlot', 200, 0, 2 )
-electronEnergyFractionPlot	= TH1F( 'electronEnergyFractionPlot', '', 200, 0, 2 )   
-HFEMEnergyFractionPlot		= TH1F( 'HFEMEnergyFractionPlot', '', 200, 0, 2 ) 
-HFHadronEnergyFractionPlot	= TH1F( 'HFHadronEnergyFractionPlot', '', 200, 0, 2 )
-muonEnergyFractionPlot		= TH1F( 'muonEnergyFractionPlot', '', 200, 0, 2 )
-neutralEmEnergyFractionPlot	= TH1F( 'neutralEmEnergyFractionPlot', '', 200, 0, 2 )
-neutralHadronEnergyFractionPlot	= TH1F( 'neutralHadronEnergyFractionPlot', '', 200, 0, 2 )
-photonEnergyFractionPlot	= TH1F( 'photonEnergyFractionPlot', '', 200, 0, 2 )
+EtaRange = [0, 1.3, 3.0]
+ListFractionNames = ['chargedEmEnergyFractionPlot', 'chargedHadronEnergyFractionPlot', 'chargedMuEnergyFractionPlot', \
+                     'electronEnergyFractionPlot', 'HFEMEnergyFractionPlot', 'HFHadronEnergyFractionPlot', \
+			'muonEnergyFractionPlot', 'neutralEmEnergyFractionPlot', 'neutralHadronEnergyFractionPlot', \
+ 			'photonEnergyFractionPlot']
+
+FractionPlotLists = []
+for i in range( len(EtaRange) ) :
+    for jName in ListFractionNames :
+	if EtaRange[i] != 3.0 :
+	    FractionPlotLists.append( TH1F( jName+"Eta"+str(EtaRange[i])+"to"+str(EtaRange[i+1]), '', 100, 0, 1) )
+	else :
+	    FractionPlotLists.append( TH1F( jName+"Eta"+str(EtaRange[i])+"Up", '', 100, 0, 1) )
+
+#the Plot matrix is like this :
+# eta = 0,  chargedEmEnergyFractionPlot, chargedHadronEnergyFractionPlot, .........
+# eta = 1.3, chargedEmEnergyFractionPlot, chargedHadronEnergyFractionPlot, ........
+
+#chargedEmEnergyFractionPlot = TH1F( 'chargedEmEnergyFractionPlot', 'chargedEmEnergyFractionPlot', 200, 0, 2 )
+#chargedHadronEnergyFractionPlot = TH1F( 'chargedHadronEnergyFractionPlot', 'chargedHadronEnergyFractionPlot', 200, 0, 2 ) 
+#chargedMuEnergyFractionPlot     = TH1F( 'chargedMuEnergyFractionPlot', 'chargedMuEnergyFractionPlot', 200, 0, 2 )
+#electronEnergyFractionPlot	= TH1F( 'electronEnergyFractionPlot', '', 200, 0, 2 )   
+#HFEMEnergyFractionPlot		= TH1F( 'HFEMEnergyFractionPlot', '', 200, 0, 2 ) 
+#HFHadronEnergyFractionPlot	= TH1F( 'HFHadronEnergyFractionPlot', '', 200, 0, 2 )
+#muonEnergyFractionPlot		= TH1F( 'muonEnergyFractionPlot', '', 200, 0, 2 )
+#neutralEmEnergyFractionPlot	= TH1F( 'neutralEmEnergyFractionPlot', '', 200, 0, 2 )
+#neutralHadronEnergyFractionPlot	= TH1F( 'neutralHadronEnergyFractionPlot', '', 200, 0, 2 )
+#photonEnergyFractionPlot	= TH1F( 'photonEnergyFractionPlot', '', 200, 0, 2 )
 
 print files
 events = Events(files)
@@ -226,17 +244,26 @@ for event in events :
     ak4PFRealJets = ak4PFJetsHandle.product()
 
     for iJet in ak4PFNoTrackJets :
-	chargedEmEnergyFractionPlot.Fill( iJet.chargedEmEnergyFraction() ) 
-	chargedHadronEnergyFractionPlot.Fill( iJet.chargedHadronEnergyFraction() )
-	chargedMuEnergyFractionPlot.Fill( iJet.chargedMuEnergyFraction() )     
-	electronEnergyFractionPlot.Fill( iJet.electronEnergyFraction() )      
-	HFEMEnergyFractionPlot.Fill( iJet.HFEMEnergyFraction() )          
-	HFHadronEnergyFractionPlot.Fill( iJet.HFHadronEnergyFraction() )      
-	muonEnergyFractionPlot.Fill( iJet.muonEnergyFraction() )          
-	neutralEmEnergyFractionPlot.Fill( iJet.neutralEmEnergyFraction() )     
-	neutralHadronEnergyFractionPlot.Fill( iJet.neutralHadronEnergyFraction() ) 
-	photonEnergyFractionPlot.Fill( iJet.photonEnergyFraction() )        
-
+        ListFraction = []
+	ListFraction.append( iJet.chargedEmEnergyFraction() )
+	ListFraction.append( iJet.chargedHadronEnergyFraction() )
+	ListFraction.append( iJet.chargedMuEnergyFraction() )
+	ListFraction.append( iJet.electronEnergyFraction() ) 
+	ListFraction.append( iJet.HFEMEnergyFraction() ) 
+	ListFraction.append( iJet.HFHadronEnergyFraction() ) 
+	ListFraction.append( iJet.muonEnergyFraction() ) 
+	ListFraction.append( iJet.neutralEmEnergyFraction() ) 
+	ListFraction.append( iJet.neutralHadronEnergyFraction() ) 
+	ListFraction.append( iJet.photonEnergyFraction() ) 
+	if Between( iJet.eta(), 0,  1.3) :
+	    for i in range( len(ListFraction) ) :
+		FractionPlotLists[i].Fill( ListFraction[i] )			
+	elif Between( iJet.eta(), 1.3, 3.0 ) :
+	    for i in range( len(ListFraction) ) :
+		FractionPlotLists[ len(ListFraction) + i ].Fill( ListFraction[i] )
+	else :
+            for i in range( len(ListFraction) ) :
+                FractionPlotLists[ 2*len(ListFraction) + i ].Fill( ListFraction[i] )
 
     ###plot the CHF and neutral hadron fraction for pF without tracks jets
 #    print dir(ak4PFNoTrackJets[0])
